@@ -1,14 +1,5 @@
-# genepersonalweb
-Hi! I'm Gene, I created this project to practice, enhance, and showcase my skill and understanding in Object-Oriented-Programming (OOP) using java. 
-
-# About Pharmacy-Information-System
-Core Functionalities
-1. User Management
-2. Medicine Management
-3. Prescription Processing
-4. Customer Management
-5. Inventory Management
-
+# About Gene-Personal-Web
+Hi! I'm Gene, I created this project to serve as my personal website to showcases my skills, projects, experience, and professional identity. This may be used as a reference for future job applications, networking, and to highlight my professional journey.
 
 This template should help get you started developing with Vue 3 in Vite.
 
