@@ -1,7 +1,8 @@
-# genepersonalweb
+Hi! I'm Gene, I created this project to serve as my personal website. This may be used as a reference for future job applications, networking, and to highlight my professional journey.
 
 # About Gene-Personal-Web
-Hi! I'm Gene, I created this project to serve as my personal website to showcases my skills, projects, experience, and professional identity. This may be used as a reference for future job applications, networking, and to highlight my professional journey.
+This project showcases my skills, projects, experience, and professional identity.
+
 
 This template should help get you started developing with Vue 3 in Vite.
 
