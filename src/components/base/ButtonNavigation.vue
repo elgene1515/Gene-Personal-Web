@@ -1,7 +1,5 @@
 <template>
-    <v-btn
-
-    >
+    <v-btn class="navigation-button">
         {{ text }}
     </v-btn>
 
@@ -13,5 +11,8 @@
     })
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
+    .navigation-button {
+        color: cyan;
+    }
 </style>

@@ -7,12 +7,12 @@
 
         <!-- SECTION Main -->
         <!-- NOTE Applicationn main contents -->
-         <AppMain></AppMain>
+        <AppMain></AppMain>
         <!-- !SECTION Main -->
 
         <!-- SECTION Footer -->
         <!-- NOTE Application main footer -->
-        <AppFooter></AppFooter>
+         <AppFooter></AppFooter>
         <!-- !SECTION Footer -->
     </v-app>
 </template>
