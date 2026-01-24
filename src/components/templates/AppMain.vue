@@ -10,7 +10,7 @@
 
             <div>
                 <ButtonOutlined class="button" text="Get in touch"></ButtonOutlined>
-                <ButtonColored class="button" text="Download CV"></ButtonColored>
+                <ButtonColored class="button" text="Download CV" @click="openCV()"></ButtonColored>
             </div>
         </v-container>
 
@@ -160,7 +160,7 @@
             </v-card>
         </v-container>
 
-        <!-- SECTION Contact -->
+        <!-- SECTION Contact Me -->
         <v-container class="contact-me">
             <h1>CONTACT ME</h1>
             <v-card class="cm-card">
@@ -190,6 +190,11 @@
 <script setup>
 import { computed} from 'vue';
 import ButtonColored from '../base/buttonColored.vue';
+import cvFile from '../../assets/Elgene_Reyes_Full_Stack_Software_Engineer.pdf'
+    
+    const openCV = () => {
+        window.open(cvFile, '_blank' );
+    }
 
     // NOTE for getting the total years of experience
     const currentDate = new Date();
