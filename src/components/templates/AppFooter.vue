@@ -5,7 +5,7 @@
         color="cyan"
     >
 
-        <h1 class="title">
+        <h1 class="title" @click="navigation.gotoSection('homeRef')">
             Software <span id="title-gene">GENE</span>gineer
         </h1>
 
@@ -35,6 +35,10 @@
 </template>
 
 <script setup>
+    import { useNavigationStore } from '@/stores/navigation';
+
+    const navigation = useNavigationStore();
+    
     const icons = [
         'mdi-facebook',
         'mdi-github',

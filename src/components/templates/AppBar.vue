@@ -1,29 +1,29 @@
 <template>
     <v-app-bar class="appbar-main-container" fluid>
         <!-- NOTE Title -->
-        <v-app-bar-title class="title" @click="gotoFunction">
+        <v-app-bar-title class="title" @click="navigation.gotoSection('homeRef')">
             Software <span id="title-gene">GENE</span>gineer
         </v-app-bar-title>
 
         <v-spacer></v-spacer>
 
         <!-- NOTE Navigation Buttons -->
-        <ButtonNavigation text="Professional Experience"/>
+        <ButtonNavigation text="Professional Experience" @click="navigation.gotoSection('professionalExperience')"/>
         
-        <ButtonNavigation text="Software Engineering Projects"/>
+        <ButtonNavigation text="Software Engineering Projects" @click="navigation.gotoSection('softwareEngineeringProjects')"/>
         
-        <ButtonNavigation text="Skills"/>
+        <ButtonNavigation text="Skills" @click="navigation.gotoSection('skills')"/>
 
-        <ButtonNavigation text="About Me"/>
+        <ButtonNavigation text="About Me" @click="navigation.gotoSection('aboutMe')"/>
 
-        <ButtonNavigation text="Contact"/>
+        <ButtonNavigation text="Contact Me" @click="navigation.gotoSection('contactMe')"/>
     </v-app-bar>
 </template>
 
 <script setup>
-    function gotoFunction(){
-        console.log("HOME");
-    }
+    import { useNavigationStore } from '@/stores/navigation';
+
+    const navigation = useNavigationStore();
 </script>
 
 <style scoped>

@@ -1,7 +1,7 @@
 <template>
     <v-main class="main-container">
         <!-- SECTION Landing -->
-        <v-container class="home">
+        <div ref="homeRef" class="home">
             <h5>Hello! I am</h5> 
                 
             <h1>Elgene John Reyes</h1>
@@ -9,13 +9,13 @@
             <h3>and I'm a Full Stack Software Engineer</h3>
 
             <div>
-                <ButtonOutlined class="button" text="Get in touch"></ButtonOutlined>
+                <ButtonOutlined class="button" text="Get in touch" @click="navigation.gotoSection('contactMe')"></ButtonOutlined>
                 <ButtonColored class="button" text="Download CV" @click="openCV()"></ButtonColored>
             </div>
-        </v-container>
+        </div>
 
         <!-- SECTION Professional Experience -->
-        <v-container class="professional-experiece">
+        <div ref="professioinalExperienceRef" class="professional-experiece">
             <h1>PROFESSIONAL EXPERIENCE</h1>
             <v-card class="pe-card">
                 <v-card-title><strong>Full Stack Web Engineer</strong> | H.R.D SINGAPORE PTE LTD</v-card-title>
@@ -28,10 +28,10 @@
                     ensure code quality.
                 </v-card-text>
             </v-card>
-        </v-container>
+        </div>
 
         <!-- SECTION Software Engineering Projects -->
-        <v-container class="software-engineering-projects">
+        <div ref="softwareEngineeringProjectRef" class="software-engineering-projects">
             <h1>SOFTWARE ENGINEERING PROJECTS</h1>
             <v-card class="sep-card">
                 <v-card-title><strong>VisiThoughts (Thesis)</strong></v-card-title>
@@ -57,10 +57,10 @@
                     Developed game logic and state management in C# for a 2D game, handling asset optimization and responsive UI scaling.
                 </v-card-text>
             </v-card>
-        </v-container>
+        </div>
 
         <!-- SECTION Skills -->
-        <v-container class="skills">
+        <div ref="skillsRef" class="skills">
             <h1>SKILLS</h1>
             <v-card class="s-card">
                 <ul>
@@ -86,10 +86,10 @@
                     </li>
                 </ul>
             </v-card>
-        </v-container>
+        </div>
 
         <!-- SECTION About Me -->
-        <v-container class="about-me">
+        <div ref="aboutMeRef" class="about-me">
             <h1>ABOUT ME</h1>
 
             <v-card class="am-card">
@@ -158,10 +158,10 @@
                     </ul>
                 </v-card-text>
             </v-card>
-        </v-container>
+        </div>
 
         <!-- SECTION Contact Me -->
-        <v-container class="contact-me">
+        <div ref="contactMeRef" class="contact-me">
             <h1>CONTACT ME</h1>
             <v-card class="cm-card">
                 <v-form class="cm-form">
@@ -183,15 +183,42 @@
                     <ButtonColored text="Submit"></ButtonColored>
                 </v-form>
             </v-card>
-        </v-container>
+        </div>
     </v-main>
 </template>
 
 <script setup>
-import { computed} from 'vue';
-import ButtonColored from '../base/buttonColored.vue';
+import { computed, ref, watch} from 'vue';
 import cvFile from '../../assets/Elgene_Reyes_Full_Stack_Software_Engineer.pdf'
-    
+import { useNavigationStore } from '@/stores/navigation';
+
+    const navigation = useNavigationStore();
+    const homeRef = ref(null);
+    const professioinalExperienceRef = ref(null);
+    const softwareEngineeringProjectRef = ref(null);
+    const skillsRef = ref(null);
+    const aboutMeRef = ref(null);
+    const contactMeRef = ref(null);
+
+    watch(
+    () => [
+        homeRef.value,
+        professioinalExperienceRef.value,
+        softwareEngineeringProjectRef.value,
+        skillsRef.value,
+        aboutMeRef.value,
+        contactMeRef.value
+    ],
+    (values) => {
+        navigation.homeRef = values[0];
+        navigation.professioinalExperienceRef = values[1];
+        navigation.softwareEngineeringProjectRef = values[2];
+        navigation.skillsRef = values[3];
+        navigation.aboutMeRef = values[4];
+        navigation.contactMeRef = values[5];
+    }
+    );
+
     const openCV = () => {
         window.open(cvFile, '_blank' );
     }
