@@ -21,7 +21,6 @@
                 <v-card-title><strong>Full Stack Web Engineer</strong> | H.R.D SINGAPORE PTE LTD</v-card-title>
                 <v-card-subtitle>(Feb 2025 – Present) - {{ getHRDTotalYearsOfExperience.years }} years and {{ getHRDTotalYearsOfExperience.months }} months</v-card-subtitle>
                 <v-card-text>
-                    Full Stack Web Engineer | H.R.D SINGAPORE PTE LTD (Feb 2025 – Present)
                     Developed and maintained scalable SPAs using Vue.js, improving front-end modularity and user
                     engagement. Engineered robust RESTful APIs using Laravel and Node.js and Express.js, facilitating seamless
                     data exchange between microservices. Optimized MySQL and MSSQL queries, resulting in faster data retrieval times for highconcurrency
