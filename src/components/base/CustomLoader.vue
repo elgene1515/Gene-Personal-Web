@@ -1,0 +1,73 @@
+<template>
+    <v-overlay class="customLoader-overlay" v-model="globalStore.isLoading">
+        <div class="loader">
+            <li class="ball"></li>
+            <li class="ball"></li>
+            <li class="ball"></li>
+        </div>
+    </v-overlay>
+</template>
+
+<script setup>
+    import { useGlobalStore } from '@/stores/globalStore';
+
+    const globalStore = useGlobalStore();
+</script>
+
+<style scoped>
+    .customLoader-overlay{
+        backdrop-filter: blur(8px) !important;
+        background: rgba(44, 62, 80, 0.4) !important; /* Matches your #2C3E50 background */
+        opacity: 1 !important;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .loader {
+        width: 60px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .ball {
+        list-style: none;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+
+    .ball:nth-child(1) {
+        animation: bounce-1 2.1s ease-in-out infinite;
+    }
+
+    @keyframes bounce-1 {
+        50% {
+        transform: translateY(-18px);
+        background-color: aqua;
+        }
+    }
+
+    .ball:nth-child(2) {
+        animation: bounce-3 2.1s ease-in-out 0.3s infinite;
+    }
+
+    @keyframes bounce-2 {
+        50% {
+        transform: translateY(-18px);
+        background-color: aqua;
+        }
+    }
+
+    .ball:nth-child(3) {
+        animation: bounce-3 2.1s ease-in-out 0.6s infinite;
+    }
+
+    @keyframes bounce-3 {
+        50% {
+        transform: translateY(-18px);
+        background-color: aqua;
+        }
+    }
+</style>

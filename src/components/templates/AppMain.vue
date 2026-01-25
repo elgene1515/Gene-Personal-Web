@@ -164,34 +164,53 @@
         <div ref="contactMeRef" class="contact-me">
             <h1>CONTACT ME</h1>
             <v-card class="cm-card">
-                <v-form class="cm-form">
+                <v-form class="cm-form" ref="formRef" @submit.prevent="sendEmail">
                     <v-text-field
+                        v-model="form.name"
                         label="Name"
                         variant="outlined"
-                        required
+                        clearable
+                        :rules="[rules.required]"
                     ></v-text-field>
                     <v-text-field
+                        v-model="form.email"
                         label="Email"
                         variant="outlined"
-                        required
+                        placeholder="example@email.com"
+                        type="email"
+                        clearable
+                        :rules="[rules.required, rules.email]"
                     ></v-text-field>
                     <v-textarea
+                        v-model="form.message"
                         label="Message"
                         variant="outlined"
-                        required
+                        clearable
+                        :rules="[rules.required]"
                     ></v-textarea>
-                    <ButtonColored text="Submit"></ButtonColored>
+                    <v-btn text="Submit" type="submit"></v-btn>
                 </v-form>
             </v-card>
         </div>
+
+        <!-- SECTION dialog -->
+        <CustomDialog></CustomDialog>
+        <CustomLoader></CustomLoader>
     </v-main>
+
 </template>
 
 <script setup>
-import { computed, ref, watch} from 'vue';
+import { computed, ref, watch, reactive} from 'vue';
 import cvFile from '../../assets/Elgene_Reyes_Full_Stack_Software_Engineer.pdf'
 import { useNavigationStore } from '@/stores/navigation';
+import { useGlobalStore } from '@/stores/globalStore';
+import emailjs from '@emailjs/browser';
 
+    // NOTE stores
+    const globalStore = useGlobalStore();
+
+    // NOTE navigation
     const navigation = useNavigationStore();
     const homeRef = ref(null);
     const professioinalExperienceRef = ref(null);
@@ -240,6 +259,64 @@ import { useNavigationStore } from '@/stores/navigation';
             'months': months
         }
     });
+
+    // NOTE form
+    const form = reactive({
+        name : '',
+        email : '',
+        message : ''
+    })
+    const formRef = ref(null);    
+
+    const rules = reactive({
+        required: value => !!value || 'This field is required.',
+        email: value => {
+            const pattern = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/
+            return pattern.test(value) || 'Invalid email address.'
+        }
+    })
+    
+    // NOTe Email Sending
+    const sendEmail = async () => {
+        const { valid } = await formRef.value.validate();
+
+        if (valid) {
+            const templateParams = {
+                name: form.name,
+                email: form.email,
+                message: form.message,
+            }
+
+            try {
+                // Replace with your actual IDs from the EmailJS dashboard
+                globalStore.isLoading = true;
+                await emailjs.send(
+                    'service_82x2571', 
+                    'template_4ondxdk', 
+                    templateParams, 
+                    'AhZioTCSlmn32-hQO'
+                );
+                globalStore.isLoading = false;
+
+                // Success state
+                globalStore.dialog.isSHow = true;
+                globalStore.dialog.title = "Email Sent";
+                globalStore.dialog.status = "success";
+                globalStore.dialog.text = "Thank you for messaging me. I will respond to your inquiry via email as soon as I get notified. Have a nice day!";
+                
+                formRef.value.reset(); // Clears form and validation
+                
+            } catch (error) {
+                // Error state
+                globalStore.dialog.title = "Sending Failed";
+                globalStore.dialog.status = "error";
+                globalStore.dialog.text = "There was an issue sending your message. Please try again later.";
+                console.error('EmailJS Error:', error);
+            }
+
+            formRef.value.reset();
+        }
+    };
 </script>
 
 <style scoped>
