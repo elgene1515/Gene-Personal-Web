@@ -188,7 +188,7 @@
                         clearable
                         :rules="[rules.required]"
                     ></v-textarea>
-                    <v-btn text="SEND" type="submit"></v-btn>
+                    <ButtonOutlined text="SEND" type="submit"></ButtonOutlined>
                 </v-form>
             </v-card>
         </div>
@@ -206,6 +206,7 @@ import cvFile from '../../assets/Elgene_Reyes_Full_Stack_Software_Engineer.pdf'
 import { useNavigationStore } from '@/stores/navigation';
 import { useGlobalStore } from '@/stores/globalStore';
 import emailjs from '@emailjs/browser';
+import ButtonOutlined from '../base/ButtonOutlined.vue';
 
     // NOTE stores
     const globalStore = useGlobalStore();
