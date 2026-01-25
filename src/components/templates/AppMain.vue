@@ -188,7 +188,7 @@
                         clearable
                         :rules="[rules.required]"
                     ></v-textarea>
-                    <v-btn text="Submit" type="submit"></v-btn>
+                    <v-btn text="SEND" type="submit"></v-btn>
                 </v-form>
             </v-card>
         </div>
