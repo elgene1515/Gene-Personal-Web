@@ -51,10 +51,11 @@
             </v-card>
 
             <v-card class="sep-card">
-                <v-card-title><strong>Pop and Match (2D Game)</strong></v-card-title>
-                <v-card-subtitle>Lead Programmer & Artist</v-card-subtitle>
+                <v-card-title><strong>Pharmacy Information System</strong></v-card-title>
+                <v-card-subtitle>Java Developer</v-card-subtitle>
                 <v-card-text>
-                    Developed game logic and state management in C# for a 2D game, handling asset optimization and responsive UI scaling.
+                    Designed and implemented a desktop-based management system using Java and OOP principles to streamline inventory tracking and
+                    prescription processing.
                 </v-card-text>
             </v-card>
         </div>
