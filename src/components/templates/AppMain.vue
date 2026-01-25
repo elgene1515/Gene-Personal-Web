@@ -393,7 +393,6 @@ import ButtonOutlined from '../base/ButtonOutlined.vue';
         color: white;
     }
     .s-card{
-        padding: 15px;
         background-color: transparent;
         color: white;
         border: 1px solid white;
@@ -410,29 +409,27 @@ import ButtonOutlined from '../base/ButtonOutlined.vue';
         color: white;
     }
     .am-card{
-        padding: 15px;
+        padding: 50px;
         background-color: transparent;
         color: white;
         border: 1px solid white;
         width: 50%;
-        padding: 50px;
     }
 
     .contact-me{
+        gap: 50px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 50px;
         color: white;
     }
     .cm-card{
-        padding: 15px;
+        padding: 50px;
         background-color: transparent;
         color: white;
         border: 1px solid white;
         width: 50%;
-        padding: 50px;
     }
     .cm-form{
         display: flex;
