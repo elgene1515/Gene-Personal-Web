@@ -74,10 +74,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: cyan;
+        background-color: #121212  ;
+        color: white;
     }
     .title {
-        color: #2C3E50;
+        color: cyan;
         font-weight: bold;
         font-size: 150%;
         cursor: pointer;

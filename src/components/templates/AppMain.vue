@@ -93,105 +93,129 @@
         <div ref="aboutMeRef" class="about-me">
             <h1>ABOUT ME</h1>
 
-            <v-card class="am-card">
-                <v-card-title><strong>SUMMARY</strong></v-card-title>
-                <v-card-text>
-                    Full Stack Software Engineer (Laravel, Vue, Node.js) specializing in full-stack web development with
-                    a focus on modern JavaScript frameworks and PHP ecosystems. Experienced in migrating legacy
-                    concepts to scalable Node.js/Express architectures and optimizing MSSQL/MySQL databases.
-                    Leveraging a strong Computer Science foundation to solve complex architectural challenges and
-                    improve application performance.
-                </v-card-text>
-            </v-card>
+            <v-row class="am-content">
+                <v-col>
+                    <v-card id="am-content-summary">
+                        <v-card-title><strong>SUMMARY</strong></v-card-title>
+                        <v-card-text>
+                            Full Stack Software Engineer (Laravel, Vue, Node.js) specializing in full-stack web development with
+                            a focus on modern JavaScript frameworks and PHP ecosystems. Experienced in migrating legacy
+                            concepts to scalable Node.js/Express architectures and optimizing MSSQL/MySQL databases.
+                            Leveraging a strong Computer Science foundation to solve complex architectural challenges and
+                            improve application performance.
+                        </v-card-text>
+                    </v-card>
+                </v-col>
+            </v-row>
 
-            <v-card class="am-card">
-                <v-card-title><strong>AWARDS & CERTIFICATIONS</strong></v-card-title>
-                <ul>
-                    <li>
-                        <v-card-subtitle>1st Place Winner (CvSU) CALABARZON Regional HackForGov 2 Competition - Sept 2023</v-card-subtitle>
-                    </li>
-                    <li>
-                        <v-card-subtitle>Civil Service Professional Eligibility – (Honor Graduate Eligibility)</v-card-subtitle>
-                    </li>
-                    <li>
-                        <v-card-subtitle>Java (Core Competencies & OOP) Certification – Armada Logics (Nov 11 - Dec 20, 2024)</v-card-subtitle>
-                    </li>
-                    <li>
-                        <v-card-subtitle>Web Development (HTML, CSS, JavaScript) – Armada Logics (Oct 21 - Nov 8, 2024)</v-card-subtitle>
-                    </li>
-                    <li>
-                        <v-card-subtitle>Web Fundamentals – Armada Logics (July 9, 2024 8hrs)</v-card-subtitle>
-                    </li>
-                    <li>
-                        <v-card-subtitle>Advanced UI/UX Concepts (4hrs) & AI Prompt Engineering (4hrs) – Armada Logics (July 8, 2024)</v-card-subtitle>
-                    </li>
-                </ul>
-            </v-card>
+            <v-row class="am-content">
+                <v-col cols="6">
+                    <v-card id="am-content-awards-and-certification">
+                        <v-card-title><strong>AWARDS & CERTIFICATIONS</strong></v-card-title>
+                        <v-card-subtitle>Awards</v-card-subtitle>
+                        <v-card-text>
+                            <ul>
+                                <li>
+                                    1st Place Winner (CvSU) CALABARZON Regional HackForGov 2 Competition - Sept 2023
+                                </li>
+                            </ul>
+                        </v-card-text>
 
-            <v-card class="am-card">
-                <v-card-title><strong>EDUCATION</strong></v-card-title>
-                <v-card-subtitle>Bachelor of Science in Computer Science</v-card-subtitle>
-                <v-card-text>
-                    <ul>
-                        <li>
-                            Cavite State University - CCAT Campus
-                        </li>
-                        <li>
-                            2019-2024
-                        </li>
-                        <li>
-                            Magna Cum Laude
-                        </li>
-                    </ul>
-                </v-card-text>
-            </v-card>
+                        <v-card-subtitle>Certifications</v-card-subtitle>
+                        <v-card-text>
+                            <ul>
+                                <li>
+                                    Civil Service Professional Eligibility – (Honor Graduate Eligibility)
+                                </li>
+                                <li>
+                                    Java (Core Competencies & OOP) Certification – Armada Logics (Nov 11 - Dec 20, 2024)
+                                </li>
+                                <li>
+                                    Web Development (HTML, CSS, JavaScript) – Armada Logics (Oct 21 - Nov 8, 2024)
+                                </li>
+                                <li>
+                                    Web Fundamentals – Armada Logics (July 9, 2024 8hrs)
+                                </li>
+                                <li>
+                                    Advanced UI/UX Concepts (4hrs) & AI Prompt Engineering (4hrs) – Armada Logics (July 8, 2024)
+                                </li>
+                            </ul>
+                        </v-card-text>
+                    </v-card>
+                </v-col>
+                <v-col cols="3">
+                    <v-card id="am-content-education">
+                        <v-card-title><strong>EDUCATION</strong></v-card-title>
+                        <v-card-subtitle>Bachelor of Science in Computer Science</v-card-subtitle>
+                        <v-card-text>
+                            <ul>
+                                <li>
+                                    Cavite State University - CCAT Campus
+                                </li>
+                                <li>
+                                    2019-2024
+                                </li>
+                                <li>
+                                    Magna Cum Laude
+                                </li>
+                            </ul>
+                        </v-card-text>
+                    </v-card>
+                </v-col>
 
-            <v-card class="am-card">
-                <v-card-title><strong>LANGUAGE</strong></v-card-title>
-                <v-card-text>
-                    <ul>
-                        <li>
-                            Tagalog
-                        </li>
-                        <li>
-                            English
-                        </li>
-                    </ul>
-                </v-card-text>
-            </v-card>
+                <v-col cols="3">
+                    <v-card id="am-content-language">
+                        <v-card-title><strong>LANGUAGE</strong></v-card-title>
+                        <v-card-text>
+                            <ul>
+                                <li>
+                                    Tagalog
+                                </li>
+                                <li>
+                                    English
+                                </li>
+                            </ul>
+                        </v-card-text>
+                    </v-card>
+                </v-col>
+            </v-row>
         </div>
 
         <!-- SECTION Contact Me -->
         <div ref="contactMeRef" class="contact-me">
             <h1>CONTACT ME</h1>
-            <v-card class="cm-card">
-                <v-form class="cm-form" ref="formRef" @submit.prevent="sendEmail">
-                    <v-text-field
-                        v-model="form.name"
-                        label="Name"
-                        variant="outlined"
-                        clearable
-                        :rules="[rules.required]"
-                    ></v-text-field>
-                    <v-text-field
-                        v-model="form.email"
-                        label="Email"
-                        variant="outlined"
-                        placeholder="example@email.com"
-                        type="email"
-                        clearable
-                        :rules="[rules.required, rules.email]"
-                    ></v-text-field>
-                    <v-textarea
-                        v-model="form.message"
-                        label="Message"
-                        variant="outlined"
-                        clearable
-                        :rules="[rules.required]"
-                    ></v-textarea>
-                    <ButtonOutlined text="SEND" type="submit"></ButtonOutlined>
-                </v-form>
-            </v-card>
+            <v-row class="cm-content">
+                <v-col cols="6">
+                    <v-card id="cm-content-form">
+                        <v-form  ref="formRef" @submit.prevent="sendEmail">
+                            <v-text-field
+                                v-model="form.name"
+                                label="Name"
+                                variant="outlined"
+                                clearable
+                                :rules="[rules.required]"
+                            ></v-text-field>
+                            <v-text-field
+                                v-model="form.email"
+                                label="Email"
+                                variant="outlined"
+                                placeholder="example@email.com"
+                                type="email"
+                                clearable
+                                :rules="[rules.required, rules.email]"
+                            ></v-text-field>
+                            <v-textarea
+                                v-model="form.message"
+                                label="Message"
+                                variant="outlined"
+                                clearable
+                                :rules="[rules.required]"
+                            ></v-textarea>
+                            <ButtonOutlined text="SEND" type="submit" block></ButtonOutlined>
+                        </v-form>
+                    </v-card>
+                </v-col>
+            </v-row>
         </div>
 
         <!-- SECTION dialog -->
@@ -207,7 +231,6 @@ import cvFile from '../../assets/Elgene_Reyes_Full_Stack_Software_Engineer.pdf'
 import { useNavigationStore } from '@/stores/navigation';
 import { useGlobalStore } from '@/stores/globalStore';
 import emailjs from '@emailjs/browser';
-import ButtonOutlined from '../base/ButtonOutlined.vue';
 
     // NOTE stores
     const globalStore = useGlobalStore();
@@ -321,118 +344,190 @@ import ButtonOutlined from '../base/ButtonOutlined.vue';
     };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
     .main-container {
         height: 100%;
         background-color: #2C3E50;
-    }
+        
+        .home{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            color: white;
+        
+            h5{
+                font-size: 200%;
+                color: white;
+            }
+            h1{
+                font-size: 700%;
+                color: cyan;
+            }
+            h3{
+                font-size: 300%;
+                color: lightslategray;
+            }
+        }
 
-    .home{
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 50px;
-        color: white;
-    }
-    .home h5{
-        font-size: 200%;
-        color: white;
-    }
-    .home h1{
-        font-size: 700%;
-        color: cyan;
-    }
-    .home h3{
-        font-size: 300%;
-        color: lightslategray;
-    }
+        .professional-experiece{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            color: white;
+        
+            .pe-card{
+                padding: 15px;
+                background-color: transparent;
+                color: white;
+                border: 1px solid white;
+                width: 50%;
+            }
+        }
 
-    .professional-experiece{
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 50px;
-        color: white;
-    }
-    .pe-card{
-        padding: 15px;
-        background-color: transparent;
-        color: white;
-        border: 1px solid white;
-        width: 50%;
-    }
+        .software-engineering-projects{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            color: white;
+        
+            .sep-card{
+                padding: 15px;
+                background-color: transparent;
+                color: white;
+                border: 1px solid white;
+                width: 50%;
+            }
+        }
 
-    .software-engineering-projects{
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 50px;
-        color: white;
-    }
-    .sep-card{
-        padding: 15px;
-        background-color: transparent;
-        color: white;
-        border: 1px solid white;
-        width: 50%;
-    }
+        .skills{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            color: white;
+            
+            .s-card{
+                background-color: transparent;
+                color: white;
+                border: 1px solid white;
+                width: 50%;
+                padding: 50px;
+            }
+        }
 
-    .skills{
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 50px;
-        color: white;
-    }
-    .s-card{
-        background-color: transparent;
-        color: white;
-        border: 1px solid white;
-        width: 50%;
-        padding: 50px;
-    }
+        // NOTE about me section
+        .about-me{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            margin: 50px;
+            padding: 15px;
+            gap: 25px;
+            color: white;
 
-    .about-me{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 50px;
-        color: white;
-    }
-    .am-card{
-        padding: 50px;
-        background-color: transparent;
-        color: white;
-        border: 1px solid white;
-        width: 50%;
-    }
+            .am-content{
+                width: 100%;
 
-    .contact-me{
-        gap: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-    }
-    .cm-card{
-        padding: 50px;
-        background-color: transparent;
-        color: white;
-        border: 1px solid white;
-        width: 50%;
-    }
-    .cm-form{
-        display: flex;
-        flex-direction: column;
+                #am-content-summary{
+                    background-color: transparent;
+                    border: 1px solid white;
+                    color: white;
+                    padding: 15px;
+                    width: auto;
+                    height: 100%;
+                }
+
+                #am-content-awards-and-certification{
+                    background-color: transparent;
+                    border: 1px solid white;
+                    color: white;
+                    padding: 10px;
+                    width: auto;
+                    height: 100%;
+                }
+
+                #am-content-education{
+                    background-color: transparent;
+                    border: 1px solid white;
+                    color: white;
+                    padding: 10px;
+                    width: auto;
+                    height: 100%;
+                }
+
+                #am-content-language{
+                    background-color: transparent;
+                    border: 1px solid white;
+                    color: white;
+                    padding: 10px;
+                    width: auto;
+                    height: 100%;
+                }
+            }
+        }
+
+        // NOTE contact me section
+        .contact-me{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            margin: 50px;
+            padding: 15px;
+            gap: 25px;
+            color: white;
+            
+            .cm-content{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+            }
+            #cm-content-form{
+                background-color: transparent;
+                border: 1px solid white;
+                color: white;
+                padding: 10px;
+                width: auto;
+                height: 100%;
+                text-align: center;
+                padding: 50px;
+
+                // error messaage color
+                :deep(.v-input--error .v-messages__message) {
+                    color: #FF5252 !important;
+                }
+
+                // label color
+                :deep(.v-input--error .v-label) {
+                    color: #FF5252 !important;
+                }
+
+                // border color
+                :deep(.v-input--error .v-field__outline) {
+                    color: #FF5252 !important; /* This changes the border color */
+                }
+
+                // text cursor and input text color
+                :deep(.v-input--error .v-field__input) {
+                    caret-color: #FF5252 !important;
+                }
+            }
+        }
     }
 </style>
