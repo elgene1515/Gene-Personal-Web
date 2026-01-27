@@ -24,6 +24,10 @@
             Thank you for visiting
         </div>
 
+        <div class="contact-number">
+            (+63) 993-5637-866
+        </div>
+
         <v-divider></v-divider>
 
         <div class="copyright">
@@ -102,6 +106,11 @@
         width: 50px;
     }
     .message{
+        font-weight: 400;
+        opacity: 0.6;
+        font-size: 15px;
+    }
+    .contact-number{
         font-weight: 400;
         opacity: 0.6;
         font-size: 15px;

@@ -63,30 +63,66 @@
         <!-- SECTION Skills -->
         <div ref="skillsRef" class="skills">
             <h1>SKILLS</h1>
-            <v-card class="s-card">
-                <ul>
-                    <li>
-                        <strong>Languages:</strong>
-                        JavaScript (ES6+), PHP, Java, SQL, HTML5, CSS3, Python
-                    </li>
-                    <li>
-                        <strong>Frameworks/Libraries:</strong>
-                        Laravel, Vue.js, Node.js, Express.js
-                    </li>
-                    <li>
-                        <strong>Databases:</strong>
-                        MySQL, MSSQL
-                    </li>
-                    <li>
-                        <strong>Tools & Technologies:</strong>
-                        Git, RESTful APIs, Unity Game Engine, Agile
-                    </li>
-                    <li>
-                        <strong>Design/Multimedia:</strong>
-                        Adobe Illustrator, Photoshop, Premiere Pro (UI/UX focused)
-                    </li>
-                </ul>
-            </v-card>
+            <v-row class="s-content">
+                <v-col>
+                    <v-card id="s-content-skills">
+                        <!-- <v-card-title><strong>SKILLS</strong></v-card-title> -->
+                        <v-card-text>
+                            <v-list-item-title>Languages</v-list-item-title>
+                            <v-list-item>
+                                - JavaScript (ES6+), PHP, Java, SQL, HTML5, CSS3, Python
+                            </v-list-item>
+                            <v-list-item-title>Frameworks/Libraries</v-list-item-title>
+                            <v-list-item>
+                                - Laravel, Vue.js, Node.js, Express.js
+                            </v-list-item>
+                            <v-list-item-title>Databases</v-list-item-title>
+                            <v-list-item>
+                                - MySQL, MSSQL
+                            </v-list-item>
+                            <v-list-item-title>Tools & Technologies</v-list-item-title>
+                            <v-list-item>
+                                - Git, RESTful APIs, Unity Game Engine, Agile
+                            </v-list-item>
+                            <v-list-item-title>Design/Multimedia</v-list-item-title>
+                            <v-list-item>
+                                - Adobe Illustrator, Photoshop, Premiere Pro (UI/UX focused)
+                            </v-list-item>
+                        </v-card-text>
+                        <v-card-text>
+                            <v-list-item>
+                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
+                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
+                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
+                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
+                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
+                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
+                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
+                            </v-list-item>
+                            <v-list-item>
+                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
+                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
+                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
+                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
+                            </v-list-item>
+                            <v-list-item>
+                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
+                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
+                            </v-list-item>
+                            <v-list-item>
+                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
+                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
+                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
+                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
+                            </v-list-item>
+                            <v-list-item>
+                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
+                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
+                            </v-list-item>
+                        </v-card-text>
+                    </v-card>
+                </v-col>
+            </v-row>
         </div>
 
         <!-- SECTION About Me -->
@@ -112,53 +148,50 @@
                 <v-col cols="6">
                     <v-card id="am-content-awards-and-certification">
                         <v-card-title><strong>AWARDS & CERTIFICATIONS</strong></v-card-title>
-                        <v-card-subtitle>Awards</v-card-subtitle>
                         <v-card-text>
-                            <ul>
-                                <li>
-                                    1st Place Winner (CvSU) CALABARZON Regional HackForGov 2 Competition - Sept 2023
-                                </li>
-                            </ul>
+                            <v-list-item-title>Awards</v-list-item-title>
+                            <v-list-item>
+                                - 1st Place Winner (CvSU) CALABARZON Regional HackForGov 2 Competition - Sept 2023
+                            </v-list-item>
                         </v-card-text>
 
-                        <v-card-subtitle>Certifications</v-card-subtitle>
                         <v-card-text>
-                            <ul>
-                                <li>
-                                    Civil Service Professional Eligibility – (Honor Graduate Eligibility)
-                                </li>
-                                <li>
-                                    Java (Core Competencies & OOP) Certification – Armada Logics (Nov 11 - Dec 20, 2024)
-                                </li>
-                                <li>
-                                    Web Development (HTML, CSS, JavaScript) – Armada Logics (Oct 21 - Nov 8, 2024)
-                                </li>
-                                <li>
-                                    Web Fundamentals – Armada Logics (July 9, 2024 8hrs)
-                                </li>
-                                <li>
-                                    Advanced UI/UX Concepts (4hrs) & AI Prompt Engineering (4hrs) – Armada Logics (July 8, 2024)
-                                </li>
-                            </ul>
+                            <v-list-item-title>Certifications</v-list-item-title>
+                            <v-list-item>
+                                - 1st Place Winner (CvSU) CALABARZON Regional HackForGov 2 Competition - Sept 2023
+                            </v-list-item>
+                            <v-list-item>
+                                - Civil Service Professional Eligibility – (Honor Graduate Eligibility)
+                            </v-list-item>
+                            <v-list-item>
+                                - Java (Core Competencies & OOP) Certification – Armada Logics (Nov 11 - Dec 20, 2024)
+                            </v-list-item>
+                            <v-list-item>
+                                - Web Development (HTML, CSS, JavaScript) – Armada Logics (Oct 21 - Nov 8, 2024)
+                            </v-list-item>
+                            <v-list-item>
+                                - Web Fundamentals – Armada Logics (July 9, 2024 8hrs)
+                            </v-list-item>
+                            <v-list-item>
+                                - Advanced UI/UX Concepts (4hrs) & AI Prompt Engineering (4hrs) – Armada Logics (July 8, 2024)
+                            </v-list-item>
                         </v-card-text>
                     </v-card>
                 </v-col>
                 <v-col cols="3">
                     <v-card id="am-content-education">
                         <v-card-title><strong>EDUCATION</strong></v-card-title>
-                        <v-card-subtitle>Bachelor of Science in Computer Science</v-card-subtitle>
                         <v-card-text>
-                            <ul>
-                                <li>
-                                    Cavite State University - CCAT Campus
-                                </li>
-                                <li>
-                                    2019-2024
-                                </li>
-                                <li>
-                                    Magna Cum Laude
-                                </li>
-                            </ul>
+                            <v-list-item-title>Bachelor of Science in Computer Science</v-list-item-title>
+                            <v-list-item>
+                                - Cavite State University - CCAT Campus
+                            </v-list-item>
+                            <v-list-item>
+                                - 2019-2024
+                            </v-list-item>
+                            <v-list-item>
+                                - Magna Cum Laude
+                            </v-list-item>
                         </v-card-text>
                     </v-card>
                 </v-col>
@@ -167,14 +200,12 @@
                     <v-card id="am-content-language">
                         <v-card-title><strong>LANGUAGE</strong></v-card-title>
                         <v-card-text>
-                            <ul>
-                                <li>
-                                    Tagalog
-                                </li>
-                                <li>
-                                    English
-                                </li>
-                            </ul>
+                            <v-list-item>
+                                - Tagalog
+                            </v-list-item>
+                            <v-list-item>
+                                - English
+                            </v-list-item>
                         </v-card-text>
                     </v-card>
                 </v-col>
@@ -227,7 +258,7 @@
 
 <script setup>
 import { computed, ref, watch, reactive} from 'vue';
-import cvFile from '../../assets/Elgene_Reyes_Full_Stack_Software_Engineer.pdf'
+import cvFile from '../../assets/curriculumVitae/Elgene_Reyes_Full_Stack_Software_Engineer.pdf';
 import { useNavigationStore } from '@/stores/navigation';
 import { useGlobalStore } from '@/stores/globalStore';
 import emailjs from '@emailjs/browser';
@@ -243,26 +274,26 @@ import emailjs from '@emailjs/browser';
     const skillsRef = ref(null);
     const aboutMeRef = ref(null);
     const contactMeRef = ref(null);
-
     watch(
-    () => [
-        homeRef.value,
-        professioinalExperienceRef.value,
-        softwareEngineeringProjectRef.value,
-        skillsRef.value,
-        aboutMeRef.value,
-        contactMeRef.value
-    ],
-    (values) => {
-        navigation.homeRef = values[0];
-        navigation.professioinalExperienceRef = values[1];
-        navigation.softwareEngineeringProjectRef = values[2];
-        navigation.skillsRef = values[3];
-        navigation.aboutMeRef = values[4];
-        navigation.contactMeRef = values[5];
-    }
+        () => [
+            homeRef.value,
+            professioinalExperienceRef.value,
+            softwareEngineeringProjectRef.value,
+            skillsRef.value,
+            aboutMeRef.value,
+            contactMeRef.value
+        ],
+        (values) => {
+            navigation.homeRef = values[0];
+            navigation.professioinalExperienceRef = values[1];
+            navigation.softwareEngineeringProjectRef = values[2];
+            navigation.skillsRef = values[3];
+            navigation.aboutMeRef = values[4];
+            navigation.contactMeRef = values[5];
+        }
     );
 
+    // NOTE download CV
     const openCV = () => {
         window.open(cvFile, '_blank' );
     }
@@ -286,13 +317,12 @@ import emailjs from '@emailjs/browser';
     });
 
     // NOTE form
+    const formRef = ref(null);    
     const form = reactive({
         name : '',
         email : '',
         message : ''
     })
-    const formRef = ref(null);    
-
     const rules = reactive({
         required: value => !!value || 'This field is required.',
         email: value => {
@@ -301,7 +331,7 @@ import emailjs from '@emailjs/browser';
         }
     })
     
-    // NOTe Email Sending
+    // NOTE form Email Sending
     const sendEmail = async () => {
         const { valid } = await formRef.value.validate();
 
@@ -409,20 +439,30 @@ import emailjs from '@emailjs/browser';
         }
 
         .skills{
-            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 50px;
-            color: white;
             
-            .s-card{
+            margin: 50px;
+            padding: 15px;
+            gap: 25px;
+            color: white;
+
+            .s-content{
+                width: 100%;
+            }
+
+            #s-content-skills{
                 background-color: transparent;
-                color: white;
                 border: 1px solid white;
-                width: 50%;
-                padding: 50px;
+                color: white;
+                padding: 15px;
+                width: auto;
+                height: 100%;
+
+                display: flex;
+                flex-direction: row;
             }
         }
 
@@ -457,6 +497,11 @@ import emailjs from '@emailjs/browser';
                     padding: 10px;
                     width: auto;
                     height: 100%;
+
+                    .v-list {
+                        background-color: transparent;
+                        color: white;
+                    }
                 }
 
                 #am-content-education{
