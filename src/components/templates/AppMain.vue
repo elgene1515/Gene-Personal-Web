@@ -91,33 +91,33 @@
                         </v-card-text>
                         <v-card-text>
                             <v-list-item>
-                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
-                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
-                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
-                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
-                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
-                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
-                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
+                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
+                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
+                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
+                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
+                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
+                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
+                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
                             </v-list-item>
                             <v-list-item>
-                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
-                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
-                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
-                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
+                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
+                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
+                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
+                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
                             </v-list-item>
                             <v-list-item>
-                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
-                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
+                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
+                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
                             </v-list-item>
                             <v-list-item>
-                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
-                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
-                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
-                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
+                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
+                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
+                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
+                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
                             </v-list-item>
                             <v-list-item>
-                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
-                                <img src="../../../public/skills/placegolder.jpg" width="50px" height="50px">
+                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
+                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
                             </v-list-item>
                         </v-card-text>
                     </v-card>
