@@ -1,6 +1,6 @@
 <template>
     <v-main class="main-container">
-        <!-- SECTION Landing -->
+        <!-- TODO SECTION Home -->
         <div ref="homeRef" class="home">
             <h5>Hello! I am</h5> 
                 
@@ -14,59 +14,97 @@
             </div>
         </div>
 
-        <!-- SECTION Professional Experience -->
+        <!-- TODO SECTION Professional Experience -->
         <div ref="professioinalExperienceRef" class="professional-experiece">
             <h1>PROFESSIONAL EXPERIENCE</h1>
-            <v-card class="pe-card">
-                <v-card-title><strong>Full Stack Web Engineer</strong> | H.R.D SINGAPORE PTE LTD</v-card-title>
-                <v-card-subtitle>(Feb 2025 – Present) - {{ getHRDTotalYearsOfExperience.years }} years and {{ getHRDTotalYearsOfExperience.months }} months</v-card-subtitle>
-                <v-card-text>
-                    Developed and maintained scalable SPAs using Vue.js, improving front-end modularity and user
-                    engagement. Engineered robust RESTful APIs using Laravel and Node.js and Express.js, facilitating seamless
-                    data exchange between microservices. Optimized MySQL and MSSQL queries, resulting in faster data retrieval times for highconcurrency
-                    internal applications. Collaborated in an Agile environment, utilizing Git for version control and peer code reviews to
-                    ensure code quality.
-                </v-card-text>
-            </v-card>
+            <v-row class="pe-content">
+                <v-col cols="12">
+                    <v-card id="pe-experience">
+                        <v-card-title><strong>Full Stack Web Engineer</strong> | H.R.D SINGAPORE PTE LTD</v-card-title>
+                        <v-card-subtitle>(Feb 2025 – Present) - {{ getHRDTotalYearsOfExperience.years }} years and {{ getHRDTotalYearsOfExperience.months }} months</v-card-subtitle>
+                        <v-card-text>
+                            Developed and maintained scalable SPAs using Vue.js, improving front-end modularity and user
+                            engagement. Engineered robust RESTful APIs using Laravel and Node.js and Express.js, facilitating seamless
+                            data exchange between microservices. Optimized MySQL and MSSQL queries, resulting in faster data retrieval times for highconcurrency
+                            internal applications. Collaborated in an Agile environment, utilizing Git for version control and peer code reviews to
+                            ensure code quality.
+                        </v-card-text>
+                    </v-card>
+                </v-col>
+            </v-row>
         </div>
 
-        <!-- SECTION Software Engineering Projects -->
+        <!-- TODO SECTION Software Engineering Projects -->
         <div ref="softwareEngineeringProjectRef" class="software-engineering-projects">
             <h1>SOFTWARE ENGINEERING PROJECTS</h1>
-            <v-card class="sep-card">
-                <v-card-title><strong>VisiThoughts (Thesis)</strong></v-card-title>
-                <v-card-subtitle>Lead Programmer</v-card-subtitle>
-                <v-card-text>
-                    Implemented a Lexicon-based Sentiment Analysis engine to process customer feedback, 
-                    utilizing Django and specialized Natural Language Toolkit (NLTK) toolkit to provide actionable insights for campus administration.
-                </v-card-text>
-            </v-card>
+            <v-row class="sep-content">
+                <v-col cols="4">
+                    <v-card id="sep-projects">
+                        <v-card-title><strong>VisiThoughts (Thesis)</strong></v-card-title>
+                        <v-card-subtitle>Lead Programmer</v-card-subtitle>
+                        <v-card-text>
+                            Implemented a Lexicon-based Sentiment Analysis engine to process customer feedback, 
+                            utilizing Django and specialized Natural Language Toolkit (NLTK) toolkit to provide actionable insights for campus administration.
+                        </v-card-text>
+                        <v-card-actions>
+                            <ButtonOutlined text="View Repository"></ButtonOutlined>
+                        </v-card-actions>
+                        <v-chip-group>
+                            <v-chip>Python</v-chip>
+                            <v-chip>Django</v-chip>
+                            <v-chip>NLTK</v-chip>
+                            <v-chip>HTML5</v-chip>
+                            <v-chip>CSS3</v-chip>
+                            <v-chip>Adobe Photoshop</v-chip>
+                        </v-chip-group>
+                    </v-card>
+                </v-col>
 
-            <v-card class="sep-card">
-                <v-card-title><strong>Pop and Match (2D Game)</strong></v-card-title>
-                <v-card-subtitle>Lead Programmer & Artist</v-card-subtitle>
-                <v-card-text>
-                    Developed game logic and state management in C# for a 2D game, handling asset optimization and responsive UI scaling.
-                </v-card-text>
-            </v-card>
+                <v-col cols="4">
+                    <v-card id="sep-projects">
+                        <v-card-title><strong>Pop and Match (2D Game)</strong></v-card-title>
+                        <v-card-subtitle>Lead Programmer & Artist</v-card-subtitle>
+                        <v-card-text>
+                            Developed game logic and state management in C# for a 2D game, handling asset optimization and responsive UI scaling.
+                        </v-card-text>
+                        <v-card-actions>
+                            <ButtonOutlined text="View Repository"></ButtonOutlined>
+                        </v-card-actions>
+                        <v-chip-group>
+                            <v-chip>C#</v-chip>
+                            <v-chip>Unity</v-chip>
+                            <v-chip>Adobe Photoshop</v-chip>
+                            <v-chip>Adobe Illustrator</v-chip>
+                        </v-chip-group>
+                    </v-card>
+                </v-col>
 
-            <v-card class="sep-card">
-                <v-card-title><strong>Pharmacy Information System</strong></v-card-title>
-                <v-card-subtitle>Java Developer</v-card-subtitle>
-                <v-card-text>
-                    Designed and implemented a desktop-based management system using Java and OOP principles to streamline inventory tracking and
-                    prescription processing.
-                </v-card-text>
-            </v-card>
+                <v-col cols="4">
+                    <v-card id="sep-projects">
+                        <v-card-title><strong>Pharmacy Information System</strong></v-card-title>
+                        <v-card-subtitle>Java Developer</v-card-subtitle>
+                        <v-card-text>
+                            Designed and implemented a desktop-based management system using Java and OOP principles to streamline inventory tracking and
+                            prescription processing.
+                        </v-card-text>
+                        <v-card-actions>
+                            <ButtonOutlined text="View Repository"></ButtonOutlined>
+                        </v-card-actions>
+                        <v-chip-group>
+                            <v-chip>Java</v-chip>
+                            <v-chip>OOP</v-chip>
+                        </v-chip-group>
+                    </v-card>
+                </v-col>
+            </v-row>
         </div>
 
         <!-- SECTION Skills -->
         <div ref="skillsRef" class="skills">
             <h1>SKILLS</h1>
             <v-row class="s-content">
-                <v-col>
-                    <v-card id="s-content-skills">
-                        <!-- <v-card-title><strong>SKILLS</strong></v-card-title> -->
+                <v-card id="s-content-skills">
+                    <v-col cols="3">
                         <v-card-text>
                             <v-list-item-title>Languages</v-list-item-title>
                             <v-list-item>
@@ -89,46 +127,40 @@
                                 - Adobe Illustrator, Photoshop, Premiere Pro (UI/UX focused)
                             </v-list-item>
                         </v-card-text>
-                        <v-card-text>
-                            <v-list-item>
-                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
-                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
-                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
-                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
-                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
-                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
-                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
-                            </v-list-item>
-                            <v-list-item>
-                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
-                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
-                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
-                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
-                            </v-list-item>
-                            <v-list-item>
-                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
-                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
-                            </v-list-item>
-                            <v-list-item>
-                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
-                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
-                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
-                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
-                            </v-list-item>
-                            <v-list-item>
-                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
-                                <img src="/public/skills/JavaScript.png" width="50px" height="50px">
-                            </v-list-item>
-                        </v-card-text>
-                    </v-card>
-                </v-col>
+                    </v-col>
+                    
+                    <v-divider vertical></v-divider>
+
+                    <v-col id="s-content-skills-images" cols="9">
+                        <v-row>
+                            <v-col><v-img src="logo/HTML5.png"></v-img></v-col>
+                            <v-col><v-img src="logo/CSS3.png"></v-img></v-col>
+                            <v-col><v-img src="logo/JavaScript.png"></v-img></v-col>
+                            <v-col><v-img src="logo/Java.png"></v-img></v-col>
+                            <v-col><v-img src="logo/PHP.png"></v-img></v-col>
+                            <v-col><v-img src="logo/Python.png"></v-img></v-col>
+                            <v-col><v-img src="logo/SQL.png"></v-img></v-col>
+                            <v-col><v-img src="logo/Laravel.png"></v-img></v-col>
+                            <v-col><v-img src="logo/VueJS.png"></v-img></v-col>
+                            <v-col><v-img src="logo/NodeJS.png"></v-img></v-col>
+                            <v-col><v-img src="logo/ExpressJS.png"></v-img></v-col>
+                            <v-col><v-img src="logo/MySQL.png"></v-img></v-col>
+                            <v-col><v-img src="logo/MSSQL.png"></v-img></v-col>
+                            <v-col><v-img src="logo/GitHub.png"></v-img></v-col>
+                            <v-col><v-img src="logo/GitLab.png"></v-img></v-col>
+                            <v-col><v-img src="logo/Unity.png"></v-img></v-col>
+                            <v-col><v-img src="logo/AdobeIllustrator.png"></v-img></v-col>
+                            <v-col><v-img src="logo/AdobePhotoshop.png"></v-img></v-col>
+                            <v-col><v-img src="logo/AdobePremierPro.png"></v-img></v-col>
+                        </v-row>
+                    </v-col>
+                </v-card>
             </v-row>
         </div>
 
         <!-- SECTION About Me -->
         <div ref="aboutMeRef" class="about-me">
             <h1>ABOUT ME</h1>
-
             <v-row class="am-content">
                 <v-col>
                     <v-card id="am-content-summary">
@@ -181,18 +213,21 @@
                 <v-col cols="3">
                     <v-card id="am-content-education">
                         <v-card-title><strong>EDUCATION</strong></v-card-title>
-                        <v-card-text>
-                            <v-list-item-title>Bachelor of Science in Computer Science</v-list-item-title>
-                            <v-list-item>
-                                - Cavite State University - CCAT Campus
-                            </v-list-item>
-                            <v-list-item>
-                                - 2019-2024
-                            </v-list-item>
-                            <v-list-item>
-                                - Magna Cum Laude
-                            </v-list-item>
-                        </v-card-text>
+                        <v-row>
+                            <v-card-text>
+                                <v-list-item-title>Bachelor of Science in Computer Science</v-list-item-title>
+                                <v-list-item>
+                                    - Cavite State University - CCAT Campus
+                                </v-list-item>
+                                <v-list-item>
+                                    - 2019-2024
+                                </v-list-item>
+                                <v-list-item>
+                                    - Magna Cum Laude
+                                </v-list-item>
+                            </v-card-text>
+                            
+                        </v-row>
                     </v-card>
                 </v-col>
 
@@ -380,11 +415,14 @@ import emailjs from '@emailjs/browser';
         background-color: #2C3E50;
         
         .home{
-            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            height: 100vh;
+
+            margin: 50px;
+            padding: 15px;
             gap: 50px;
             color: white;
         
@@ -403,41 +441,57 @@ import emailjs from '@emailjs/browser';
         }
 
         .professional-experiece{
-            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 50px;
+            
+            margin: 50px;
+            padding: 15px;
+            gap: 25px;
             color: white;
-        
-            .pe-card{
-                padding: 15px;
-                background-color: transparent;
-                color: white;
-                border: 1px solid white;
-                width: 50%;
+
+            .pe-content{
+                width: 100%;
+
+                #pe-experience{
+                    background-color: transparent;
+                    border: 1px solid white;
+                    color: white;
+                    padding: 10px;
+                    height: 100%;
+                }
             }
         }
 
         .software-engineering-projects{
-            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 50px;
+            
+            margin: 50px;
+            padding: 15px;
+            gap: 25px;
             color: white;
-        
-            .sep-card{
-                padding: 15px;
-                background-color: transparent;
-                color: white;
-                border: 1px solid white;
-                width: 50%;
+
+            .sep-content{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+            
+                #sep-projects{
+                    background-color: transparent;
+                    border: 1px solid white;
+                    color: white;
+                    padding: 10px;
+                    width: 500px;
+                    height: 100%;
+                }
             }
         }
 
+        // NOTE skill me section
         .skills{
             display: flex;
             flex-direction: column;
@@ -458,11 +512,25 @@ import emailjs from '@emailjs/browser';
                 border: 1px solid white;
                 color: white;
                 padding: 15px;
-                width: auto;
+                width: 100%;
                 height: 100%;
 
                 display: flex;
                 flex-direction: row;
+                
+                #s-content-skills-images{
+                    display: flex;
+                    flex-direction: column;
+                    
+                    .v-img{
+                        height: 100px;
+                        width: 150px;
+                        filter: grayscale(100%);
+                    }
+                    .v-img:hover{
+                        filter: grayscale(0);
+                    }
+                }
             }
         }
 
