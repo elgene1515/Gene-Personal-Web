@@ -374,15 +374,21 @@ import emailjs from '@emailjs/browser';
     });
 
     // NOTE for opening project repository
-    // const openProjectRepository = (project) => {
-    //     if(project == 'visithoughts'){
-    //         window.open('https://github.com/elgene1515/Visithoughts', '_blank');
-    //     } else if(project == 'popandmatch'){
-    //         window.open('https://github.com/elgene1515/POPandMATCH', '_blank');
-    //     } else if(project == 'pharmacyinformationsystem'){
-    //         window.open('https://github.com/elgene1515/Pharmacy-Information-System', '_blank');
-    //     }
-    // }
+    const openProjectRepository = (project) =>{
+        switch (project) {
+            case 'visithoughts':
+                window.open('https://github.com/elgene1515/Visithoughts', '_blank');
+                break;
+            case 'popandmatch':
+                window.open('https://github.com/elgene1515/POPandMATCH', '_blank');
+                    break;
+            case 'pharmacyinformationsystem':
+                window.open('https://github.com/elgene1515/Pharmacy-Information-System', '_blank');
+                break;
+            default:
+                break;
+        }
+    }
 
     // NOTE form
     const formRef = ref(null);    
