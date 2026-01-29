@@ -315,7 +315,7 @@
 
 <script setup>
 import { computed, ref, watch, reactive} from 'vue';
-import cvFile from '../../assets/curriculumVitae/Elgene_Reyes_Full_Stack_Software_Engineer.pdf';
+import cvFile from '../../../public/curriculumVitae/Elgene_Reyes_Full_Stack_Software_Engineer.pdf';
 import { useNavigationStore } from '@/stores/navigation';
 import { useGlobalStore } from '@/stores/globalStore';
 import emailjs from '@emailjs/browser';
