@@ -89,7 +89,7 @@
                         </v-card-text>
                         <v-spacer></v-spacer>
                         <v-card-actions>
-                            <ButtonOutlined text="View Repository"></ButtonOutlined>
+                            <ButtonOutlined text="View Repository" @click="openProjectRepository('popandmatch')"></ButtonOutlined>
                         </v-card-actions>
                         <v-chip-group>
                             <v-chip>C#</v-chip>
@@ -110,7 +110,7 @@
                         </v-card-text>
                         <v-spacer></v-spacer>
                         <v-card-actions>
-                            <ButtonOutlined text="View Repository"></ButtonOutlined>
+                            <ButtonOutlined text="View Repository" @click="openProjectRepository('pharmacyinformationsystem')"></ButtonOutlined>
                         </v-card-actions>
                         <v-chip-group>
                             <v-chip>Java</v-chip>
