@@ -66,7 +66,7 @@
                         </v-card-text>
                         <v-spacer></v-spacer>
                         <v-card-actions>
-                            <ButtonOutlined text="View Repository" @click="window.open('https://github.com/elgene1515/Visithoughts', '_blank')"></ButtonOutlined>
+                            <ButtonOutlined text="View Repository" @click="openProjectRepository('visithoughts')"></ButtonOutlined>
                         </v-card-actions>
                         <v-chip-group>
                             <v-chip>Python</v-chip>
@@ -374,17 +374,18 @@ import emailjs from '@emailjs/browser';
     });
 
     // NOTE for opening project repository
-    // const openProjectRepository = (project) => {
-    //     const urls = {
-    //         'visithoughts': 'https://github.com/elgene1515/Visithoughts',
-    //         'popandmatch': 'https://github.com/elgene1515/POPandMATCH',
-    //         'pharmacyinformationsystem': 'https://github.com/elgene1515/Pharmacy-Information-System'
-    //     };
+    const openProjectRepository = (project) => {
+        const urls = {
+            'visithoughts': 'https://github.com/elgene1515/Visithoughts',
+            'popandmatch': 'https://github.com/elgene1515/POPandMATCH',
+            'pharmacyinformationsystem': 'https://github.com/elgene1515/Pharmacy-Information-System'
+        };
 
-    //     if (urls[project]) {
-    //         window.open(urls[project], '_blank');
-    //     }
-    // };
+        const url = urls[project];
+        if (url) {
+            window.open(url, '_blank', 'noopener,noreferrer');
+        }
+    };
 
     // NOTE form
     const formRef = ref(null);    
