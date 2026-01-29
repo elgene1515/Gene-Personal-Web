@@ -1,20 +1,25 @@
 <template>
     <v-main class="main-container">
-        <!-- TODO SECTION Home -->
+        <!-- SECTION Home -->
         <div ref="homeRef" class="home">
-            <h5>Hello! I am</h5> 
-                
-            <h1>Elgene John Reyes</h1>
-            
-            <h3>and I'm a Full Stack Software Engineer</h3>
-
-            <div>
-                <ButtonOutlined class="button" text="Get in touch" @click="navigation.gotoSection('contactMe')"></ButtonOutlined>
-                <ButtonColored class="button" text="Download CV" @click="openCV()"></ButtonColored>
-            </div>
+            <v-row class="h-content">
+                <v-col cols="12">
+                    <v-container id="h-container">
+                        <h5>Hello! I am</h5> 
+        
+                        <h1>Elgene John Reyes</h1>
+                        
+                        <h3>and I'm a Full Stack Software Engineer</h3>
+                        <v-row>
+                            <ButtonOutlined class="button" text="Get in touch" @click="navigation.gotoSection('contactMe')"></ButtonOutlined>
+                            <ButtonColored class="button" text="Download CV" @click="openCV()"></ButtonColored>
+                        </v-row>
+                    </v-container>
+                </v-col>
+            </v-row>
         </div>
 
-        <!-- TODO SECTION Professional Experience -->
+        <!-- SECTION Professional Experience -->
         <div ref="professioinalExperienceRef" class="professional-experiece">
             <h1>PROFESSIONAL EXPERIENCE</h1>
             <v-row class="pe-content">
@@ -29,12 +34,25 @@
                             internal applications. Collaborated in an Agile environment, utilizing Git for version control and peer code reviews to
                             ensure code quality.
                         </v-card-text>
+                        <v-chip-group>
+                            <v-chip>Laravel</v-chip>
+                            <v-chip>Vue JS</v-chip>
+                            <v-chip>Node JS</v-chip>
+                            <v-chip>Express JS</v-chip>
+                            <v-chip>PHP</v-chip>
+                            <v-chip>JavaScript</v-chip>
+                            <v-chip>HTML 5</v-chip>
+                            <v-chip>CSS 3</v-chip>
+                            <v-chip>SQL</v-chip>
+                            <v-chip>SQL DBX</v-chip>
+                            <v-chip>MSSQL</v-chip>
+                        </v-chip-group>
                     </v-card>
                 </v-col>
             </v-row>
         </div>
 
-        <!-- TODO SECTION Software Engineering Projects -->
+        <!-- SECTION Software Engineering Projects -->
         <div ref="softwareEngineeringProjectRef" class="software-engineering-projects">
             <h1>SOFTWARE ENGINEERING PROJECTS</h1>
             <v-row class="sep-content">
@@ -46,8 +64,9 @@
                             Implemented a Lexicon-based Sentiment Analysis engine to process customer feedback, 
                             utilizing Django and specialized Natural Language Toolkit (NLTK) toolkit to provide actionable insights for campus administration.
                         </v-card-text>
+                        <v-spacer></v-spacer>
                         <v-card-actions>
-                            <ButtonOutlined text="View Repository"></ButtonOutlined>
+                            <ButtonOutlined text="View Repository" @click="openProjectRepository('visithoughts')"></ButtonOutlined>
                         </v-card-actions>
                         <v-chip-group>
                             <v-chip>Python</v-chip>
@@ -55,6 +74,7 @@
                             <v-chip>NLTK</v-chip>
                             <v-chip>HTML5</v-chip>
                             <v-chip>CSS3</v-chip>
+                            <v-chip>JavaScript</v-chip>
                             <v-chip>Adobe Photoshop</v-chip>
                         </v-chip-group>
                     </v-card>
@@ -67,8 +87,9 @@
                         <v-card-text>
                             Developed game logic and state management in C# for a 2D game, handling asset optimization and responsive UI scaling.
                         </v-card-text>
+                        <v-spacer></v-spacer>
                         <v-card-actions>
-                            <ButtonOutlined text="View Repository"></ButtonOutlined>
+                            <ButtonOutlined text="View Repository" @click="openProjectRepository('popandmatch')"></ButtonOutlined>
                         </v-card-actions>
                         <v-chip-group>
                             <v-chip>C#</v-chip>
@@ -87,8 +108,9 @@
                             Designed and implemented a desktop-based management system using Java and OOP principles to streamline inventory tracking and
                             prescription processing.
                         </v-card-text>
+                        <v-spacer></v-spacer>
                         <v-card-actions>
-                            <ButtonOutlined text="View Repository"></ButtonOutlined>
+                            <ButtonOutlined text="View Repository"  @click="openProjectRepository('pharmacyinformationsystem')"></ButtonOutlined>
                         </v-card-actions>
                         <v-chip-group>
                             <v-chip>Java</v-chip>
@@ -351,6 +373,17 @@ import emailjs from '@emailjs/browser';
         }
     });
 
+    // NOTE for opening project repository
+    const openProjectRepository = (project) => {
+        if(project == 'visithoughts'){
+            window.open('https://github.com/elgene1515/Visithoughts', '_blank');
+        } else if(project == 'popandmatch'){
+            window.open('https://github.com/elgene1515/POPandMATCH', '_blank');
+        } else if(project == 'pharmacyinformationsystem'){
+            window.open('https://github.com/elgene1515/Pharmacy-Information-System', '_blank');
+        }
+    }
+
     // NOTE form
     const formRef = ref(null);    
     const form = reactive({
@@ -411,7 +444,6 @@ import emailjs from '@emailjs/browser';
 
 <style lang="scss" scoped>
     .main-container {
-        height: 100%;
         background-color: #2C3E50;
         
         .home{
@@ -420,23 +452,38 @@ import emailjs from '@emailjs/browser';
             justify-content: center;
             align-items: center;
             height: 100vh;
+            scroll-margin-top: 100px;
 
-            margin: 50px;
             padding: 15px;
-            gap: 50px;
+            gap: 25px;
             color: white;
-        
-            h5{
-                font-size: 200%;
-                color: white;
-            }
-            h1{
-                font-size: 700%;
-                color: cyan;
-            }
-            h3{
-                font-size: 300%;
-                color: lightslategray;
+
+            .h-content{
+                height: 100%;
+                
+                #h-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: transparent;
+                    gap: 50px;
+                    height: 100%;
+
+                    h5{
+                        font-size: 200%;
+                        color: white;
+                        margin-top: 200px;
+                    }
+                    h1{
+                        font-size: 700%;
+                        color: cyan;
+                    }
+                    h3{
+                        font-size: 300%;
+                        color: lightslategray;
+                    }
+                }
             }
         }
 
@@ -445,6 +492,7 @@ import emailjs from '@emailjs/browser';
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            scroll-margin-top: 100px;
             
             margin: 50px;
             padding: 15px;
@@ -469,6 +517,7 @@ import emailjs from '@emailjs/browser';
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            scroll-margin-top: 100px;
             
             margin: 50px;
             padding: 15px;
@@ -487,16 +536,18 @@ import emailjs from '@emailjs/browser';
                     padding: 10px;
                     width: 500px;
                     height: 100%;
+                    display: flex;
+                    flex-direction: column;
                 }
             }
         }
 
-        // NOTE skill me section
         .skills{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            scroll-margin-top: 100px;
             
             margin: 50px;
             padding: 15px;
@@ -534,12 +585,12 @@ import emailjs from '@emailjs/browser';
             }
         }
 
-        // NOTE about me section
         .about-me{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            scroll-margin-top: 100px;
             
             margin: 50px;
             padding: 15px;
@@ -592,12 +643,12 @@ import emailjs from '@emailjs/browser';
             }
         }
 
-        // NOTE contact me section
         .contact-me{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            scroll-margin-top: 100px;
             
             margin: 50px;
             padding: 15px;
