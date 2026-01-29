@@ -350,6 +350,20 @@ import emailjs from '@emailjs/browser';
         }
     );
 
+    // NOTE for opening project repository
+    const openProjectRepository = (project) => {
+        const urls = {
+            'visithoughts': 'https://github.com/elgene1515/Visithoughts',
+            'popandmatch': 'https://github.com/elgene1515/POPandMATCH',
+            'pharmacyinformationsystem': 'https://github.com/elgene1515/Pharmacy-Information-System'
+        };
+
+        const url = urls[project];
+        if (url) {
+            window.open(url, '_blank', 'noopener,noreferrer');
+        }
+    };
+
     // NOTE download CV
     const openCV = () => {
         window.open(cvFile, '_blank' );
@@ -372,20 +386,6 @@ import emailjs from '@emailjs/browser';
             'months': months
         }
     });
-
-    // NOTE for opening project repository
-    const openProjectRepository = (project) => {
-        const urls = {
-            'visithoughts': 'https://github.com/elgene1515/Visithoughts',
-            'popandmatch': 'https://github.com/elgene1515/POPandMATCH',
-            'pharmacyinformationsystem': 'https://github.com/elgene1515/Pharmacy-Information-System'
-        };
-
-        const url = urls[project];
-        if (url) {
-            window.open(url, '_blank', 'noopener,noreferrer');
-        }
-    };
 
     // NOTE form
     const formRef = ref(null);    
