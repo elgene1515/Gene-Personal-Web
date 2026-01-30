@@ -352,7 +352,6 @@ import emailjs from '@emailjs/browser';
     
     // NOTE for opening project repository
     const openProjectRepository = (project) =>{
-        console.log(project);
         switch (project) {
             case 'visithoughts':
                 window.open('https://github.com/elgene1515/visithoughts', '_blank');
