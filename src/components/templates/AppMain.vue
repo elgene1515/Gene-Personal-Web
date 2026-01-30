@@ -351,15 +351,20 @@ import emailjs from '@emailjs/browser';
     );
     
     // NOTE for opening project repository
-    const openProjectRepository = (project) => {
-        const urls = {
-            'visithoughts': 'https://www.facebook.com/elgene8/',
-            'popandmatch': 'https://www.facebook.com/elgene8/',
-        };
-
-        const url = urls[project];
-        if (url) {
-            window.open(url, '_blank', 'noopener,noreferrer');
+    const openProjectRepository = (project) =>{
+        console.log(project);
+        switch (project) {
+            case 'facebook':
+                window.open('https://www.facebook.com/elgene8/', '_blank');
+                break;
+            case 'github':
+                window.open('https://github.com/elgene1515', '_blank');
+                    break;
+            case 'linkedin':
+                window.open('https://www.linkedin.com/in/elgene-reyes/', '_blank');
+                break;
+            default:
+                break;
         }
     }
 
