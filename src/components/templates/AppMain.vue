@@ -353,14 +353,17 @@ import emailjs from '@emailjs/browser';
     // NOTE for opening project repository
     const openProjectRepository = (project) => {
         const urls = {
-            'visithoughts': 'https://www.facebook.com/elgene8/',
-            'popandmatch': 'https://www.facebook.com/elgene8/',
-            'pharmacyinformationsystem': 'https://www.facebook.com/elgene8/'
+            'visithoughts': 'https://github.com/elgene1515/Visithoughts',
+            'popandmatch': 'https://github.com/elgene1515/POPandMATCH',
+            'pharmacyinformationsystem': 'https://github.com/elgene1515/Pharmacy-Information-System'
         };
 
         const url = urls[project];
         if (url) {
+            console.log('Opening URL:', url);
             window.open(url, '_blank', 'noopener,noreferrer');
+        } else {
+            console.error('No URL found for project:', project);
         }
     };
 
