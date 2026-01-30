@@ -351,18 +351,18 @@ import emailjs from '@emailjs/browser';
     );
     
     // NOTE for opening project repository
-    // const openProjectRepository = (project) => {
-    //     const urls = {
-    //         'visithoughts': 'https://github.com/elgene1515/Visithoughts',
-    //         'popandmatch': 'https://github.com/elgene1515/POPandMATCH',
-    //         'pharmacyinformationsystem': 'https://github.com/elgene1515/Pharmacy-Information-System'
-    //     };
+    const openProjectRepository = (project) => {
+        const urls = {
+            'visithoughts': 'https://www.facebook.com/elgene8/',
+            'popandmatch': 'https://www.facebook.com/elgene8/',
+            'pharmacyinformationsystem': 'https://www.facebook.com/elgene8/'
+        };
 
-    //     const url = urls[project];
-    //     if (url) {
-    //         window.open(url, '_blank', 'noopener,noreferrer');
-    //     }
-    // };
+        const url = urls[project];
+        if (url) {
+            window.open(url, '_blank', 'noopener,noreferrer');
+        }
+    };
 
     // NOTE download CV
     const openCV = () => {
