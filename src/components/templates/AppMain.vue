@@ -350,7 +350,7 @@ import emailjs from '@emailjs/browser';
         }
     );
     
-    // NOTE for opening project repository
+    // NOTE for opening project repository 
     const openProjectRepository = (project) =>{
         switch (project) {
             case 'visithoughts':
