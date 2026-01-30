@@ -354,13 +354,13 @@ import emailjs from '@emailjs/browser';
     const openProjectRepository = (project) =>{
         console.log(project);
         switch (project) {
-            case 'facebook':
+            case 'visithoughts':
                 window.open('https://www.facebook.com/elgene8/', '_blank');
                 break;
-            case 'github':
+            case 'popandmatch':
                 window.open('https://github.com/elgene1515', '_blank');
                     break;
-            case 'linkedin':
+            case 'pharmacyinformationsystem':
                 window.open('https://www.linkedin.com/in/elgene-reyes/', '_blank');
                 break;
             default:
