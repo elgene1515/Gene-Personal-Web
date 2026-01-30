@@ -355,7 +355,6 @@ import emailjs from '@emailjs/browser';
         const urls = {
             'visithoughts': 'https://www.facebook.com/elgene8/',
             'popandmatch': 'https://www.facebook.com/elgene8/',
-            'pharmacyinformationsystem': 'github.com/elgene1515/Pharmacy-Information-System'
         };
 
         const url = urls[project];
