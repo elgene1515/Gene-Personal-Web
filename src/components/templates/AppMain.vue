@@ -353,19 +353,16 @@ import emailjs from '@emailjs/browser';
     // NOTE for opening project repository
     const openProjectRepository = (project) => {
         const urls = {
-            'visithoughts': 'https://github.com/elgene1515/Visithoughts',
-            'popandmatch': 'https://github.com/elgene1515/POPandMATCH',
-            'pharmacyinformationsystem': 'https://github.com/elgene1515/Pharmacy-Information-System'
+            'visithoughts': 'https://www.facebook.com/elgene8/',
+            'popandmatch': 'https://www.facebook.com/elgene8/',
+            'pharmacyinformationsystem': 'github.com/elgene1515/Pharmacy-Information-System'
         };
 
         const url = urls[project];
         if (url) {
-            console.log('Opening URL:', url);
             window.open(url, '_blank', 'noopener,noreferrer');
-        } else {
-            console.error('No URL found for project:', project);
         }
-    };
+    }
 
     // NOTE download CV
     const openCV = () => {
