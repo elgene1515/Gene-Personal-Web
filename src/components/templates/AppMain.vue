@@ -361,7 +361,7 @@ import emailjs from '@emailjs/browser';
                 window.open('https://github.com/elgene1515/popandmatch', '_blank');
                     break;
             case 'pharmacyinformationsystem':
-                window.open('https://github.com/elgene1515/Pharmacy-Information-System', '_blank');
+                window.open('https://github.com/elgene1515/pharmacy-information-system', '_blank');
                 break;
             default:
                 break;
