@@ -358,10 +358,10 @@ import emailjs from '@emailjs/browser';
                 window.open('https://github.com/elgene1515/visithoughts', '_blank');
                 break;
             case 'popandmatch':
-                window.open('https://github.com/elgene1515', '_blank');
+                window.open('https://github.com/elgene1515/popandmatch', '_blank');
                     break;
             case 'pharmacyinformationsystem':
-                window.open('https://www.linkedin.com/in/elgene-reyes/', '_blank');
+                window.open('https://github.com/elgene1515/Pharmacy-Information-System', '_blank');
                 break;
             default:
                 break;
