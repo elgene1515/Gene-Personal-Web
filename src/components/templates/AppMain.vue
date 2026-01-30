@@ -355,7 +355,7 @@ import emailjs from '@emailjs/browser';
         console.log(project);
         switch (project) {
             case 'visithoughts':
-                window.open('https://www.facebook.com/elgene8/', '_blank');
+                window.open('https://github.com/elgene1515/visithoughts', '_blank');
                 break;
             case 'popandmatch':
                 window.open('https://github.com/elgene1515', '_blank');
