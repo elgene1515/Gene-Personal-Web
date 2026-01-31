@@ -56,68 +56,22 @@
         <div ref="softwareEngineeringProjectRef" class="software-engineering-projects">
             <h1>SOFTWARE ENGINEERING PROJECTS</h1>
             <v-row class="sep-content">
-                <v-col cols="4">
-                    <v-card id="sep-projects">
-                        <v-card-title><strong>VisiThoughts (Thesis)</strong></v-card-title>
-                        <v-card-subtitle>Lead Programmer</v-card-subtitle>
-                        <v-card-text>
-                            Implemented a Lexicon-based Sentiment Analysis engine to process customer feedback, 
-                            utilizing Django and specialized Natural Language Toolkit (NLTK) toolkit to provide actionable insights for campus administration.
-                        </v-card-text>
+                <ButtonOutlined icon="mdi-chevron-left" @click="prev" class="left"></ButtonOutlined>
+                <v-col cols="3" v-for="(project , projectKey) in listOfSoftwareEngineeringProjects" :key="projectKey" :class="['sep-projects', getCardClass(projectKey)]">
+                    <v-card class="sep-projects-card">
+                        <v-card-title><strong>{{ project.title}}</strong></v-card-title>
+                        <v-card-subtitle>{{ project.role }}</v-card-subtitle>
+                        <v-card-text>{{ project.description }}</v-card-text>
                         <v-spacer></v-spacer>
                         <v-card-actions>
-                            <ButtonOutlined text="View Repository" @click="openProjectRepository('visithoughts')"></ButtonOutlined>
+                            <ButtonOutlined text="View Repository" @click="openProjectRepository(project.repo)"></ButtonOutlined>
                         </v-card-actions>
                         <v-chip-group>
-                            <v-chip>Python</v-chip>
-                            <v-chip>Django</v-chip>
-                            <v-chip>NLTK</v-chip>
-                            <v-chip>HTML5</v-chip>
-                            <v-chip>CSS3</v-chip>
-                            <v-chip>JavaScript</v-chip>
-                            <v-chip>Adobe Photoshop</v-chip>
+                            <v-chip v-for="(tag, tagKey) in project.tags" :key="tagKey">{{ tag }}</v-chip>
                         </v-chip-group>
                     </v-card>
                 </v-col>
-
-                <v-col cols="4">
-                    <v-card id="sep-projects">
-                        <v-card-title><strong>Pop and Match (2D Game)</strong></v-card-title>
-                        <v-card-subtitle>Lead Programmer & Artist</v-card-subtitle>
-                        <v-card-text>
-                            Developed game logic and state management in C# for a 2D game, handling asset optimization and responsive UI scaling.
-                        </v-card-text>
-                        <v-spacer></v-spacer>
-                        <v-card-actions>
-                            <ButtonOutlined text="View Repository" @click="openProjectRepository('popandmatch')"></ButtonOutlined>
-                        </v-card-actions>
-                        <v-chip-group>
-                            <v-chip>C#</v-chip>
-                            <v-chip>Unity</v-chip>
-                            <v-chip>Adobe Photoshop</v-chip>
-                            <v-chip>Adobe Illustrator</v-chip>
-                        </v-chip-group>
-                    </v-card>
-                </v-col>
-
-                <v-col cols="4">
-                    <v-card id="sep-projects">
-                        <v-card-title><strong>Pharmacy Information System</strong></v-card-title>
-                        <v-card-subtitle>Java Developer</v-card-subtitle>
-                        <v-card-text>
-                            Designed and implemented a desktop-based management system using Java and OOP principles to streamline inventory tracking and
-                            prescription processing.
-                        </v-card-text>
-                        <v-spacer></v-spacer>
-                        <v-card-actions>
-                            <ButtonOutlined text="View Repository" @click="openProjectRepository('pharmacyinformationsystem')"></ButtonOutlined>
-                        </v-card-actions>
-                        <v-chip-group>
-                            <v-chip>Java</v-chip>
-                            <v-chip>OOP</v-chip>
-                        </v-chip-group>
-                    </v-card>
-                </v-col>
+                <ButtonOutlined icon="mdi-chevron-right" @click="next" class="right"></ButtonOutlined>
             </v-row>
         </div>
 
@@ -349,8 +303,47 @@ import emailjs from '@emailjs/browser';
             navigation.contactMeRef = values[5];
         }
     );
-    
-    // NOTE for opening project repository
+
+    // NOTE list of projects
+    const listOfSoftwareEngineeringProjects = ref([
+        {
+            title: "Pharmacy Info System",
+            role: "Java Developer",
+            repo: "pharmacyinformationsystem",
+            description: "Designed and implemented a desktop-based management system using Java and OOP principles to streamline inventory tracking and prescription processing.",
+            tags: ["Java", "OOP"]
+        },
+        {
+            title: "VisiThoughts (Thesis)",
+            role: "Lead Programmer",
+            repo: "visithoughts",
+            description: "Implemented a Lexicon-based Sentiment Analysis engine to process customer feedback, utilizing Django and specialized Natural Language Toolkit (NLTK) toolkit to provide actionable insights for campus administration.",
+            tags: ["Python", "Django", "NLTK", "HTML5", "CSS3", "JavaScript", "Adobe Photoshop"]
+        },
+        {
+            title: "Pop and Match (2D Game)",
+            role: "Lead Programmer & Artist",
+            repo: "popandmatch",
+            description: "Developed game logic and state management in C# for a 2D game, handling asset optimization and responsive UI scaling.",
+            tags: ["C#", "Unity", "Adobe Photoshop", "Adobe Illustrator"]
+        }
+    ]);
+
+    // NOTE for project carousel
+    const activeProjectIndex  = ref(1);
+    const next = () => {
+        activeProjectIndex.value = (activeProjectIndex.value + 1) % listOfSoftwareEngineeringProjects.value.length;
+    }
+    const prev = () => {
+        activeProjectIndex.value = (activeProjectIndex.value - 1 + listOfSoftwareEngineeringProjects.value.length) % listOfSoftwareEngineeringProjects.value.length;
+    }
+    const getCardClass = (index) => {
+        const total = listOfSoftwareEngineeringProjects.value.length;
+        if (index === activeProjectIndex.value) return 'active';
+        if (index === (activeProjectIndex.value - 1 + total) % total) return 'prev';
+        if (index === (activeProjectIndex.value + 1) % total) return 'next';
+        return 'hidden';
+    }
     const openProjectRepository = (project) =>{
         switch (project) {
             case 'visithoughts':
@@ -531,19 +524,51 @@ import emailjs from '@emailjs/browser';
             color: white;
 
             .sep-content{
-                width: 100%;
                 display: flex;
-                flex-direction: row;
-            
-                #sep-projects{
-                    background-color: transparent;
-                    border: 1px solid white;
-                    color: white;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 500px;
+                position: relative;
+                overflow: hidden;
+
+                .sep-projects{
+                    position: absolute;
+                    width: 100%;
+                    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
                     padding: 10px;
-                    width: 500px;
-                    height: 100%;
-                    display: flex;
-                    flex-direction: column;
+                    opacity: 0;
+
+                    .sep-projects-card{
+                        background-color: transparent;
+                        border: 1px solid white;
+                        color: white;
+                        padding: 10px;
+                        height: 100%;
+                    }
+                }
+                .sep-projects.prev{
+                    transform: scale(1) translateX(-120%);
+                    opacity: 0.6;
+                }
+                .sep-projects.active{
+                    transform: scale(1.15) translateX(0);
+                    opacity: 1;
+                    z-index: 10;
+                }
+                .sep-projects.next{
+                    transform: scale(1) translateX(120%);
+                    opacity: 0.6;
+                }
+
+                .left, .right{
+                    position: absolute;
+                }
+                .left{
+                    left: 1%;
+                }
+                .right{
+                    right: 1%;
                 }
             }
         }

@@ -1,12 +1,14 @@
 <template>
     <v-btn class="custom-button1">
+        <v-icon v-if="icon" :icon="icon"></v-icon>
         {{ text }}
     </v-btn>
 </template>
 
 <script setup>
     defineProps({
-        text: {type: String, required: true},
+        text: {type: String},
+        icon: {type: String},
     })       
 </script>
 
