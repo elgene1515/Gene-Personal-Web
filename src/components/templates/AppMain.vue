@@ -1,7 +1,7 @@
 <template>
     <v-main class="main-container">
         <!-- SECTION Home -->
-        <div ref="homeRef" class="home" fluid>
+        <div ref="homeRef" class="home">
             <v-row class="h-content">
                 <v-col cols="12">
                     <v-container id="h-container">
