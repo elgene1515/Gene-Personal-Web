@@ -1,5 +1,5 @@
 <template>
-    <v-app-bar class="appbar-main-container" fluid>
+    <v-app-bar class="appbar-main-container" fluid fixed>
         <!-- NOTE Title -->
         <v-app-bar-title class="title" @click="navigationStore.gotoSection('homeRef')">
             Software <span id="title-gene">GENE</span>gineer
