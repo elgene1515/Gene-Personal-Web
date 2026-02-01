@@ -3,14 +3,14 @@
         <!-- SECTION Home -->
         <div ref="homeRef" class="home">
             <v-row class="h-content">
-                <v-col cols="12">
+                <v-col>
                     <v-container id="h-container">
                         <h5>Hello! I am</h5> 
         
                         <h1>Elgene John Reyes</h1>
                         
                         <h3>and I'm a Full Stack Software Engineer</h3>
-                        <v-row>
+                        <v-row class="h-button">
                             <ButtonOutlined class="button" text="Get in touch" @click="navigation.gotoSection('contactMe')"></ButtonOutlined>
                             <ButtonColored class="button" text="Download CV" @click="openCV()"></ButtonColored>
                         </v-row>
@@ -23,7 +23,7 @@
         <div ref="professioinalExperienceRef" class="professional-experiece">
             <h1>PROFESSIONAL EXPERIENCE</h1>
             <v-row class="pe-content">
-                <v-col cols="12">
+                <v-col>
                     <v-card id="pe-experience">
                         <v-card-title><strong>Full Stack Web Engineer</strong> | H.R.D SINGAPORE PTE LTD</v-card-title>
                         <v-card-subtitle>(Feb 2025 – Present) - {{ getHRDTotalYearsOfExperience.years }} years and {{ getHRDTotalYearsOfExperience.months }} months</v-card-subtitle>
@@ -56,9 +56,12 @@
         <div ref="softwareEngineeringProjectRef" class="software-engineering-projects">
             <h1>SOFTWARE ENGINEERING PROJECTS</h1>
             <v-row class="sep-content">
-                <ButtonOutlined icon="mdi-chevron-left" @click="prev" class="left"></ButtonOutlined>
-                <v-col cols="3" v-for="(project , projectKey) in listOfSoftwareEngineeringProjects" :key="projectKey" :class="['sep-projects', getCardClass(projectKey)]">
-                    <v-card class="sep-projects-card">
+                <v-col>
+                    <ButtonOutlined icon="mdi-chevron-left" @click="prev" class="left"></ButtonOutlined>
+                </v-col>
+
+                <v-col class="sep-projects">
+                    <v-card v-for="(project , projectKey) in listOfSoftwareEngineeringProjects" :key="projectKey" :class="['sep-projects-card', getCardClass(projectKey)]">
                         <v-card-title><strong>{{ project.title}}</strong></v-card-title>
                         <v-card-subtitle>{{ project.role }}</v-card-subtitle>
                         <v-card-text>{{ project.description }}</v-card-text>
@@ -71,7 +74,10 @@
                         </v-chip-group>
                     </v-card>
                 </v-col>
-                <ButtonOutlined icon="mdi-chevron-right" @click="next" class="right"></ButtonOutlined>
+
+                <v-col>
+                    <ButtonOutlined icon="mdi-chevron-right" @click="next" class="right"></ButtonOutlined>
+                </v-col>
             </v-row>
         </div>
 
@@ -79,8 +85,8 @@
         <div ref="skillsRef" class="skills">
             <h1>SKILLS</h1>
             <v-row class="s-content">
-                <v-card id="s-content-skills">
-                    <v-col cols="3">
+                <v-col>
+                    <v-card id="s-content-skills">
                         <v-card-text>
                             <v-list-item-title>Languages</v-list-item-title>
                             <v-list-item>
@@ -103,11 +109,11 @@
                                 - Adobe Illustrator, Photoshop, Premiere Pro (UI/UX focused)
                             </v-list-item>
                         </v-card-text>
-                    </v-col>
-                    
-                    <v-divider vertical></v-divider>
+                    </v-card>
+                </v-col>
 
-                    <v-col id="s-content-skills-images" cols="9">
+                <v-col>
+                    <v-card id="s-content-skills-images">
                         <v-row>
                             <v-col><v-img src="logo/HTML5.png"></v-img></v-col>
                             <v-col><v-img src="logo/CSS3.png"></v-img></v-col>
@@ -129,8 +135,8 @@
                             <v-col><v-img src="logo/AdobePhotoshop.png"></v-img></v-col>
                             <v-col><v-img src="logo/AdobePremierPro.png"></v-img></v-col>
                         </v-row>
-                    </v-col>
-                </v-card>
+                    </v-card>
+                </v-col>
             </v-row>
         </div>
 
@@ -153,7 +159,7 @@
             </v-row>
 
             <v-row class="am-content">
-                <v-col cols="6">
+                <v-col>
                     <v-card id="am-content-awards-and-certification">
                         <v-card-title><strong>AWARDS & CERTIFICATIONS</strong></v-card-title>
                         <v-card-text>
@@ -186,7 +192,7 @@
                         </v-card-text>
                     </v-card>
                 </v-col>
-                <v-col cols="3">
+                <v-col>
                     <v-card id="am-content-education">
                         <v-card-title><strong>EDUCATION</strong></v-card-title>
                         <v-row>
@@ -207,7 +213,7 @@
                     </v-card>
                 </v-col>
 
-                <v-col cols="3">
+                <v-col>
                     <v-card id="am-content-language">
                         <v-card-title><strong>LANGUAGE</strong></v-card-title>
                         <v-card-text>
@@ -227,7 +233,7 @@
         <div ref="contactMeRef" class="contact-me">
             <h1>CONTACT ME</h1>
             <v-row class="cm-content">
-                <v-col cols="6">
+                <v-col>
                     <v-card id="cm-content-form">
                         <v-form  ref="formRef" @submit.prevent="sendEmail">
                             <v-text-field
@@ -525,50 +531,50 @@ import emailjs from '@emailjs/browser';
 
             .sep-content{
                 display: flex;
+                flex-direction: row;
                 align-items: center;
                 justify-content: center;
                 width: 100%;
                 height: 500px;
-                position: relative;
-                overflow: hidden;
+
+                .left, .right{
+                    position: absolute;
+                    z-index: 10;
+                }
+                .left{
+                    left: 3%;
+                }
+                .right{
+                    right: 3%;
+                }
 
                 .sep-projects{
-                    position: absolute;
-                    width: 100%;
-                    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-                    padding: 10px;
-                    opacity: 0;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
 
                     .sep-projects-card{
+                        transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
                         background-color: transparent;
                         border: 1px solid white;
                         color: white;
                         padding: 10px;
-                        height: 100%;
+                        width: 500px;
+                        position: absolute;
                     }
-                }
-                .sep-projects.prev{
-                    transform: scale(1) translateX(-120%);
-                    opacity: 0.6;
-                }
-                .sep-projects.active{
-                    transform: scale(1.15) translateX(0);
-                    opacity: 1;
-                    z-index: 10;
-                }
-                .sep-projects.next{
-                    transform: scale(1) translateX(120%);
-                    opacity: 0.6;
-                }
-
-                .left, .right{
-                    position: absolute;
-                }
-                .left{
-                    left: 1%;
-                }
-                .right{
-                    right: 1%;
+                    .sep-projects-card.prev{
+                        transform: scale(1) translateX(-110%);
+                        opacity: 0.6;
+                    }
+                    .sep-projects-card.active{
+                        transform: scale(1.15) translateX(0);
+                        opacity: 1;
+                    }
+                    .sep-projects-card.next{
+                        transform: scale(1) translateX(110%);
+                        opacity: 0.6;
+                    }
                 }
             }
         }
@@ -579,7 +585,7 @@ import emailjs from '@emailjs/browser';
             justify-content: center;
             align-items: center;
             scroll-margin-top: 100px;
-            
+
             margin: 50px;
             padding: 15px;
             gap: 25px;
@@ -587,22 +593,23 @@ import emailjs from '@emailjs/browser';
 
             .s-content{
                 width: 100%;
-            }
 
-            #s-content-skills{
-                background-color: transparent;
-                border: 1px solid white;
-                color: white;
-                padding: 15px;
-                width: 100%;
-                height: 100%;
+                #s-content-skills{
+                    background-color: transparent;
+                    border: 1px solid white;
+                    color: white;
+                    padding: 10px;
+                    width: auto;
+                    height: 100%;
+                }
 
-                display: flex;
-                flex-direction: row;
-                
                 #s-content-skills-images{
-                    display: flex;
-                    flex-direction: column;
+                    background-color: transparent;
+                    border: 1px solid white;
+                    color: white;
+                    padding: 10px;
+                    width: auto;
+                    height: 100%;
                     
                     .v-img{
                         height: 100px;
@@ -687,7 +694,7 @@ import emailjs from '@emailjs/browser';
             color: white;
             
             .cm-content{
-                width: 100%;
+                width: 80%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -724,5 +731,131 @@ import emailjs from '@emailjs/browser';
                 }
             }
         }
+
+        @media (max-width: 1200px) {
+            .home{
+                .h-content{                    
+                    #h-container {
+                        h5{
+                            font-size: 200%;
+                            margin-top: 50px;
+                        }
+                        h1{
+                            font-size: 400%;
+                            display: flex;
+                            text-align: center;
+                        }
+                        h3{
+                            font-size: 200%;
+                            text-align: center;
+                        }
+                        .h-button{
+                            margin-top: 20%;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+                        }
+                    }
+                }
+            }
+            .professional-experiece{
+                margin: 0;
+                gap: 0;
+                scroll-margin-top: 65px;
+
+                h1{
+                    text-align: center;
+                }
+            }
+            .software-engineering-projects{
+                margin: 0;
+                gap: 0;
+                scroll-margin-top: 65px;
+
+                h1{
+                    text-align: center;
+                }
+
+                .sep-content{
+                    height: 500px;
+                    position: relative;
+                    overflow: hidden;
+
+                    .left{
+                        bottom: 0%;
+                    }
+                    .right{
+                        bottom: 0%;
+                    }
+
+                    .sep-projects{
+                        .sep-projects-card{
+                            padding: 0;
+                            width: 80%;
+                            height: 70%;
+                            margin-bottom: 15%;
+                            margin-top: 15%;
+                        }
+                        .sep-projects-card.prev{
+                            opacity: 0;
+                        }
+                        .sep-projects-card.next{
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+            .skills{
+                margin: 0;
+                gap: 0;
+                scroll-margin-top: 65px;
+
+                h1{
+                    text-align: center;
+                }
+
+                .s-content{
+                    display: flex;
+                    flex-direction: column;
+
+                    #s-content-skills{
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    #s-content-skills-images{
+                        .v-img{
+                            height: 50px;
+                            width: 75px;
+                        }
+                    }
+                }
+            }
+            .about-me{
+                margin: 0;
+                gap: 0;
+                scroll-margin-top: 65px;
+
+                h1{
+                    text-align: center;
+                }
+            }
+            .contact-me{
+                margin: 0;
+                scroll-margin-top: 65px;
+
+                h1{
+                    text-align: center;
+                }
+                
+                .cm-content{
+                    width: 100%;
+                }
+                #cm-content-form{
+                    padding: 25px;
+                }
+            }
+        }
     }
+
 </style>
