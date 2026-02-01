@@ -1,5 +1,5 @@
 <template>
-    <v-main class="main-container" fluid>
+    <v-main class="main-container">
         <!-- SECTION Home -->
         <div ref="homeRef" class="home">
             <v-row class="h-content">
