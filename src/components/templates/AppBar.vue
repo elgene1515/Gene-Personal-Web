@@ -72,15 +72,6 @@
             }
         }
     }
-    
-    @media (max-width: 1200px) {
-        .appbar-main-container , .navigation-drawer{
-
-            .title{
-                
-            }
-        }
-    }
 </style>
 
 
