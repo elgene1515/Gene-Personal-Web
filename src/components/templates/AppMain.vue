@@ -211,9 +211,7 @@
                             
                         </v-row>
                     </v-card>
-                </v-col>
 
-                <v-col>
                     <v-card id="am-content-language">
                         <v-card-title><strong>LANGUAGE</strong></v-card-title>
                         <v-card-text>
@@ -459,6 +457,7 @@ import emailjs from '@emailjs/browser';
             height: 100vh;
             scroll-margin-top: 100px;
 
+            margin: 50px;
             padding: 15px;
             gap: 25px;
             color: white;
@@ -495,7 +494,7 @@ import emailjs from '@emailjs/browser';
         .professional-experiece{
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: start;
             align-items: center;
             height: 100vh;
             scroll-margin-top: 100px;
@@ -507,13 +506,13 @@ import emailjs from '@emailjs/browser';
 
             .pe-content{
                 width: 100%;
+                max-height: fit-content;
 
                 #pe-experience{
                     background-color: transparent;
                     border: 1px solid white;
                     color: white;
                     padding: 10px;
-                    height: 100%;
                 }
             }
         }
@@ -537,7 +536,6 @@ import emailjs from '@emailjs/browser';
                 align-items: center;
                 justify-content: center;
                 width: 100%;
-                height: 500px;
 
                 .left, .right{
                     position: absolute;
@@ -562,7 +560,7 @@ import emailjs from '@emailjs/browser';
                         border: 1px solid white;
                         color: white;
                         padding: 10px;
-                        width: 500px;
+                        width: 45vh;
                         position: absolute;
                     }
                     .sep-projects-card.prev{
@@ -584,7 +582,7 @@ import emailjs from '@emailjs/browser';
         .skills{
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: start;
             align-items: center;
             height: 100vh;
             scroll-margin-top: 100px;
@@ -596,14 +594,13 @@ import emailjs from '@emailjs/browser';
 
             .s-content{
                 width: 100%;
+                max-height: fit-content;
 
                 #s-content-skills{
                     background-color: transparent;
                     border: 1px solid white;
                     color: white;
                     padding: 10px;
-                    width: auto;
-                    height: 100%;
                 }
 
                 #s-content-skills-images{
@@ -611,12 +608,10 @@ import emailjs from '@emailjs/browser';
                     border: 1px solid white;
                     color: white;
                     padding: 10px;
-                    width: auto;
-                    height: 100%;
                     
                     .v-img{
-                        height: 100px;
-                        width: 150px;
+                        height: 10vh;
+                        width: 10vh;
                         filter: grayscale(100%);
                     }
                     .v-img:hover{
@@ -629,7 +624,7 @@ import emailjs from '@emailjs/browser';
         .about-me{
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: start;
             align-items: center;
             height: 100vh;
             scroll-margin-top: 100px;
@@ -641,14 +636,13 @@ import emailjs from '@emailjs/browser';
 
             .am-content{
                 width: 100%;
+                max-height: fit-content;
 
                 #am-content-summary{
                     background-color: transparent;
                     border: 1px solid white;
                     color: white;
-                    padding: 15px;
-                    width: auto;
-                    height: 100%;
+                    padding: 10px;
                 }
 
                 #am-content-awards-and-certification{
@@ -656,8 +650,6 @@ import emailjs from '@emailjs/browser';
                     border: 1px solid white;
                     color: white;
                     padding: 10px;
-                    width: auto;
-                    height: 100%;
 
                     .v-list {
                         background-color: transparent;
@@ -665,22 +657,24 @@ import emailjs from '@emailjs/browser';
                     }
                 }
 
-                #am-content-education{
-                    background-color: transparent;
-                    border: 1px solid white;
-                    color: white;
-                    padding: 10px;
-                    width: auto;
-                    height: 100%;
-                }
-
-                #am-content-language{
-                    background-color: transparent;
-                    border: 1px solid white;
-                    color: white;
-                    padding: 10px;
-                    width: auto;
-                    height: 100%;
+                .v-col{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 25px;
+                    
+                    #am-content-education{
+                        background-color: transparent;
+                        border: 1px solid white;
+                        color: white;
+                        padding: 10px;
+                    }
+    
+                    #am-content-language{
+                        background-color: transparent;
+                        border: 1px solid white;
+                        color: white;
+                        padding: 10px;
+                    }
                 }
             }
         }
@@ -688,7 +682,7 @@ import emailjs from '@emailjs/browser';
         .contact-me{
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: start;
             align-items: center;
             height: 100vh;
             scroll-margin-top: 100px;
@@ -700,10 +694,7 @@ import emailjs from '@emailjs/browser';
             
             .cm-content{
                 width: 80%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                
+                max-height: fit-content;
             }
             #cm-content-form{
                 background-color: transparent;
@@ -739,11 +730,11 @@ import emailjs from '@emailjs/browser';
 
         @media (max-width: 1200px) {
             .home{
+                scroll-margin-top: 120px;
                 .h-content{                    
                     #h-container {
                         h5{
-                            font-size: 200%;
-                            margin-top: 50px;
+                            margin-top: 0vh;
                         }
                         h1{
                             font-size: 400%;
@@ -751,11 +742,11 @@ import emailjs from '@emailjs/browser';
                             text-align: center;
                         }
                         h3{
-                            font-size: 200%;
+                            font-size: 150%;
                             text-align: center;
                         }
                         .h-button{
-                            margin-top: 20%;
+                            margin-top: 0%;
                             display: flex;
                             flex-direction: column;
                             gap: 20px;
@@ -782,24 +773,17 @@ import emailjs from '@emailjs/browser';
                 }
 
                 .sep-content{
-                    height: 500px;
                     position: relative;
                     overflow: hidden;
-
-                    .left{
-                        bottom: 0%;
-                    }
-                    .right{
-                        bottom: 0%;
-                    }
+                    display: flex;
+                    align-items: start;
 
                     .sep-projects{
                         .sep-projects-card{
                             padding: 0;
                             width: 80%;
-                            height: 70%;
                             margin-bottom: 15%;
-                            margin-top: 15%;
+                            margin-top: 150%;
                         }
                         .sep-projects-card.prev{
                             opacity: 0;
@@ -831,12 +815,13 @@ import emailjs from '@emailjs/browser';
                     #s-content-skills-images{
                         .v-img{
                             height: 50px;
-                            width: 75px;
+                            width: 50px;
                         }
                     }
                 }
             }
             .about-me{
+                height: 200vh;
                 margin: 0;
                 gap: 0;
                 scroll-margin-top: 65px;

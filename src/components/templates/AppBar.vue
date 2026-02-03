@@ -16,7 +16,7 @@
 
     <v-navigation-drawer v-model="drawer" location="top" temporary class="navigation-drawer">
         <v-list>
-            <v-list-item v-for="(navigation, navigationIndex) in navigations" :key="navigationIndex" @click="navigationStore.gotoSection(navigation.section)">{{ navigation.text }}</v-list-item>
+            <v-list-item v-for="(navigation, navigationIndex) in navigations" :key="navigationIndex" @click="navigationStore.gotoSection(navigation.section), drawer = !drawer">{{ navigation.text }}</v-list-item>
         </v-list>
     </v-navigation-drawer>
 </template>
