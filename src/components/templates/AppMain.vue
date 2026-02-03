@@ -497,6 +497,7 @@ import emailjs from '@emailjs/browser';
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            height: 100vh;
             scroll-margin-top: 100px;
             
             margin: 50px;
@@ -522,6 +523,7 @@ import emailjs from '@emailjs/browser';
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            height: 100vh;
             scroll-margin-top: 100px;
             
             margin: 50px;
@@ -584,6 +586,7 @@ import emailjs from '@emailjs/browser';
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            height: 100vh;
             scroll-margin-top: 100px;
 
             margin: 50px;
@@ -628,6 +631,7 @@ import emailjs from '@emailjs/browser';
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            height: 100vh;
             scroll-margin-top: 100px;
             
             margin: 50px;
@@ -686,6 +690,7 @@ import emailjs from '@emailjs/browser';
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            height: 100vh;
             scroll-margin-top: 100px;
             
             margin: 50px;
