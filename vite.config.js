@@ -11,6 +11,9 @@ export default defineConfig({
     vue(),
     // vueDevTools(),
   ],
+  server: {
+    allowedHosts: true // This allows all hostnames, including Pinggy for "ssh -p 443 -R 0:localhost:5173 a.pinggy.io"
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
