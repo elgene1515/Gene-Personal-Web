@@ -1,7 +1,7 @@
 <template>
     <v-app-bar class="appbar-main-container">
         <!-- NOTE Title -->
-        <v-app-bar-title class="title" @click="navigationStore.gotoSection('homeRef')">
+        <v-app-bar-title class="title" @click="navigationStore.gotoSection('homeRef'), drawer = !drawer">
             Software <span id="title-gene">GENE</span>gineer
         </v-app-bar-title>
 

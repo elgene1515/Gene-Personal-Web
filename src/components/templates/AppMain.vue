@@ -4,16 +4,16 @@
         <div ref="homeRef" class="home">
             <v-row class="h-content">
                 <v-col>
-                    <v-container id="h-container">
+                    <v-container class="h-container">
                         <h5>Hello! I am</h5> 
         
                         <h1>Elgene John Reyes</h1>
                         
                         <h3>and I'm a Full Stack Software Engineer</h3>
-                        <v-row class="h-button">
+                        <div class="h-button">
                             <ButtonOutlined class="button" text="Get in touch" @click="navigation.gotoSection('contactMe')"></ButtonOutlined>
                             <ButtonColored class="button" text="Download CV" @click="openCV()"></ButtonColored>
-                        </v-row>
+                        </div>
                     </v-container>
                 </v-col>
             </v-row>
@@ -24,7 +24,7 @@
             <h1>PROFESSIONAL EXPERIENCE</h1>
             <v-row class="pe-content">
                 <v-col>
-                    <v-card id="pe-experience">
+                    <v-card class="pe-experience">
                         <v-card-title><strong>Full Stack Web Engineer</strong> | H.R.D SINGAPORE PTE LTD</v-card-title>
                         <v-card-subtitle>(Feb 2025 – Present) - {{ getHRDTotalYearsOfExperience.years }} years and {{ getHRDTotalYearsOfExperience.months }} months</v-card-subtitle>
                         <v-card-text>
@@ -57,11 +57,11 @@
             <h1>SOFTWARE ENGINEERING PROJECTS</h1>
             <v-row class="sep-content">
                 <v-col>
-                    <ButtonOutlined icon="mdi-chevron-left" @click="prev" class="left"></ButtonOutlined>
+                    <ButtonOutlined class="left" icon="mdi-chevron-left" @click="prev"></ButtonOutlined>
                 </v-col>
-
-                <v-col class="sep-projects">
-                    <v-card v-for="(project , projectKey) in listOfSoftwareEngineeringProjects" :key="projectKey" :class="['sep-projects-card', getCardClass(projectKey)]">
+    
+                <v-col>
+                    <v-card :class="['sep-projects-card', getCardClass(projectKey)]" v-for="(project , projectKey) in listOfSoftwareEngineeringProjects" :key="projectKey">
                         <v-card-title><strong>{{ project.title}}</strong></v-card-title>
                         <v-card-subtitle>{{ project.role }}</v-card-subtitle>
                         <v-card-text>{{ project.description }}</v-card-text>
@@ -74,9 +74,9 @@
                         </v-chip-group>
                     </v-card>
                 </v-col>
-
+    
                 <v-col>
-                    <ButtonOutlined icon="mdi-chevron-right" @click="next" class="right"></ButtonOutlined>
+                    <ButtonOutlined class="right" icon="mdi-chevron-right" @click="next"></ButtonOutlined>
                 </v-col>
             </v-row>
         </div>
@@ -86,7 +86,8 @@
             <h1>SKILLS</h1>
             <v-row class="s-content">
                 <v-col>
-                    <v-card id="s-content-skills">
+                    <v-card class="s-skills">
+                        <v-card-title>Technologies</v-card-title>
                         <v-card-text>
                             <v-list-item-title>Languages</v-list-item-title>
                             <v-list-item>
@@ -111,9 +112,9 @@
                         </v-card-text>
                     </v-card>
                 </v-col>
-
+    
                 <v-col>
-                    <v-card id="s-content-skills-images">
+                    <v-card class="s-skills-images">
                         <v-row>
                             <v-col><v-img src="logo/HTML5.png"></v-img></v-col>
                             <v-col><v-img src="logo/CSS3.png"></v-img></v-col>
@@ -145,7 +146,7 @@
             <h1>ABOUT ME</h1>
             <v-row class="am-content">
                 <v-col>
-                    <v-card id="am-content-summary">
+                    <v-card class="am-summary">
                         <v-card-title><strong>SUMMARY</strong></v-card-title>
                         <v-card-text>
                             Full Stack Software Engineer (Laravel, Vue, Node.js) specializing in full-stack web development with
@@ -156,11 +157,9 @@
                         </v-card-text>
                     </v-card>
                 </v-col>
-            </v-row>
-
-            <v-row class="am-content">
+                
                 <v-col>
-                    <v-card id="am-content-awards-and-certification">
+                    <v-card class="am-awards-and-certification">
                         <v-card-title><strong>AWARDS & CERTIFICATIONS</strong></v-card-title>
                         <v-card-text>
                             <v-list-item-title>Awards</v-list-item-title>
@@ -168,7 +167,7 @@
                                 - 1st Place Winner (CvSU) CALABARZON Regional HackForGov 2 Competition - Sept 2023
                             </v-list-item>
                         </v-card-text>
-
+    
                         <v-card-text>
                             <v-list-item-title>Certifications</v-list-item-title>
                             <v-list-item>
@@ -192,27 +191,29 @@
                         </v-card-text>
                     </v-card>
                 </v-col>
-                <v-col>
-                    <v-card id="am-content-education">
-                        <v-card-title><strong>EDUCATION</strong></v-card-title>
-                        <v-row>
-                            <v-card-text>
-                                <v-list-item-title>Bachelor of Science in Computer Science</v-list-item-title>
-                                <v-list-item>
-                                    - Cavite State University - CCAT Campus
-                                </v-list-item>
-                                <v-list-item>
-                                    - 2019-2024
-                                </v-list-item>
-                                <v-list-item>
-                                    - Magna Cum Laude
-                                </v-list-item>
-                            </v-card-text>
-                            
-                        </v-row>
-                    </v-card>
 
-                    <v-card id="am-content-language">
+                <v-col>
+                    <v-card class="am-education">
+                        <v-card-title><strong>EDUCATION</strong></v-card-title>
+                    
+                        <v-card-text>
+                            <v-list-item-title>Bachelor of Science in Computer Science</v-list-item-title>
+                            <v-list-item>
+                                - Cavite State University - CCAT Campus
+                            </v-list-item>
+                            <v-list-item>
+                                - 2019-2024
+                            </v-list-item>
+                            <v-list-item>
+                                - Magna Cum Laude
+                            </v-list-item>
+                        </v-card-text>
+                
+                    </v-card>
+                </v-col>
+
+                <v-col>
+                    <v-card class="am-language">
                         <v-card-title><strong>LANGUAGE</strong></v-card-title>
                         <v-card-text>
                             <v-list-item>
@@ -229,10 +230,10 @@
 
         <!-- SECTION Contact Me -->
         <div ref="contactMeRef" class="contact-me">
-            <h1>CONTACT ME</h1>
             <v-row class="cm-content">
                 <v-col>
-                    <v-card id="cm-content-form">
+                    <v-card class="cm-form">
+                        <v-card-title>CONTACT ME</v-card-title>
                         <v-form  ref="formRef" @submit.prevent="sendEmail">
                             <v-text-field
                                 v-model="form.name"
@@ -263,12 +264,11 @@
                 </v-col>
             </v-row>
         </div>
-
+    
         <!-- SECTION dialog -->
         <CustomDialog></CustomDialog>
         <CustomLoader></CustomLoader>
     </v-main>
-
 </template>
 
 <script setup>
@@ -446,168 +446,302 @@ import emailjs from '@emailjs/browser';
 </script>
 
 <style lang="scss" scoped>
+    // TODO Mobile (Portrait)	0px to 480px	Your base styles (no media query needed).
     .main-container {
         background-color: #2C3E50;
-        
+
         .home{
+            scroll-margin-top: 80px;
+            min-height: 100vh; 
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            height: 100vh;
-            scroll-margin-top: 100px;
-
-            margin: 50px;
-            padding: 15px;
-            gap: 25px;
+            text-align: center;
+            padding: 20px;
             color: white;
 
             .h-content{
-                height: 100%;
+                width: 100%;
                 
-                #h-container {
+                .h-container {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    background-color: transparent;
-                    gap: 50px;
-                    height: 100%;
+                    text-align: center;
+                    gap: 3rem; 
 
-                    h5{
-                        font-size: 200%;
-                        color: white;
-                        margin-top: 200px;
+                    h5 {
+                        padding: 0;
+                        line-height: 1.6;
+                        font-size: 1.2rem;
+                        color: white;                        
                     }
-                    h1{
-                        font-size: 700%;
+
+                    h1 {
+                        padding: 0;
+                        line-height: 1.1;
+                        font-size: 2.5rem;
                         color: cyan;
+                        text-transform: uppercase;
                     }
-                    h3{
-                        font-size: 300%;
+
+                    h3 {
+                        padding: 0;
+                        line-height: 1.4;
+                        font-size: 1.1rem;
                         color: lightslategray;
+                        max-width: 80%;
+                    }
+
+                    .h-button {
+                        display: flex;
+                        flex-direction: column;
                     }
                 }
             }
         }
-
-        .professional-experiece{
+        .professional-experiece {
+            scroll-margin-top: 80px;
+            min-height: 100vh; 
             display: flex;
             flex-direction: column;
-            justify-content: start;
             align-items: center;
-            height: 100vh;
-            scroll-margin-top: 100px;
-            
-            margin: 50px;
-            padding: 15px;
-            gap: 25px;
+            text-align: center;
+            padding: 20px;
             color: white;
 
-            .pe-content{
-                width: 100%;
-                max-height: fit-content;
+            h1 {
+                margin-bottom: 2rem;
+                font-size: 1.8rem;
+            }
 
-                #pe-experience{
-                    background-color: transparent;
-                    border: 1px solid white;
+            .pe-content {
+                width: 100%;
+
+                .pe-experience {
+                    background-color: rgba(255, 255, 255, 0.05);
+                    border: 1px solid cyan;
                     color: white;
-                    padding: 10px;
+                    padding: 1rem;
+                    text-align: left;
+
+                    .v-card-title, 
+                    .v-list-item-title,
+                    .v-card-subtitle {
+                        white-space: normal !important;
+                        word-wrap: break-word;
+                        line-height: 1.4;
+                        font-size: 1rem;
+                        padding: 2rem 0 0 0;
+                        display: block;
+                        font-weight: bold;
+                    }
+
+                    .v-card-title {
+                        padding: 0;
+                        font-size: 1.2rem;
+                    }
+
+                    .v-card-subtitle {
+                        color: cyan;
+                        font-weight: normal;
+                        font-size: 1rem;
+                        padding: 0 0 1rem 0;
+                    }
+
+                    .v-card-text {
+                        padding: 0;
+                        line-height: 1.6;
+                        font-size: 0.95rem;
+                    }
+                    .v-chip-group{
+                        :deep(.v-slide-group__content) {
+                            justify-content: center;
+                        }
+                    }
                 }
             }
         }
-
         .software-engineering-projects{
+            scroll-margin-top: 80px;
+            min-height: 100vh; 
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            height: 100vh;
-            scroll-margin-top: 100px;
-            
-            margin: 50px;
-            padding: 15px;
-            gap: 25px;
+            text-align: center;
+            padding: 20px;
             color: white;
+            height: 500px;
+            overflow: hidden;
+
+            h1 {
+                margin-bottom: 2rem;
+                font-size: 1.8rem;
+            }
 
             .sep-content{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
                 width: 100%;
+                position: relative;
 
                 .left, .right{
                     position: absolute;
+                    top: auto;
+                    bottom: 100px;
                     z-index: 10;
+                    border: 1px solid cyan;
                 }
                 .left{
-                    left: 3%;
+                    left: 1em;
                 }
                 .right{
-                    right: 3%;
+                    right: 1em;
                 }
 
-                .sep-projects{
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: center;
+                .sep-projects-card{ 
+                    background-color: rgba(255, 255, 255, 0.05);
+                    border: 1px solid cyan;
+                    color: white;
+                    padding: 1rem;
+                    display: flex; 
+                    flex-direction: column;
+                    align-items: flex-start;
+                    text-align: left;
+                    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+                    position: absolute;
+                    width: 80vw;
+                    opacity: 0;
 
-                    .sep-projects-card{
-                        transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-                        background-color: transparent;
-                        border: 1px solid white;
-                        color: white;
-                        padding: 10px;
-                        width: 45vh;
-                        position: absolute;
+                    .v-card-title, 
+                    .v-list-item-title,
+                    .v-card-subtitle {
+                        white-space: normal !important;
+                        word-wrap: break-word;
+                        line-height: 1.4;
+                        font-size: 1rem;
+                        padding: 2rem 0 0 0;
+                        display: block;
+                        font-weight: bold;
                     }
-                    .sep-projects-card.prev{
-                        transform: scale(1) translateX(-110%);
-                        opacity: 0.6;
+
+                    .v-card-title {
+                        padding: 0;
+                        font-size: 1.2rem;
                     }
-                    .sep-projects-card.active{
-                        transform: scale(1.15) translateX(0);
-                        opacity: 1;
+
+                    .v-card-subtitle {
+                        color: cyan;
+                        font-weight: normal;
+                        font-size: 1rem;
+                        padding: 0 0 1rem 0;
                     }
-                    .sep-projects-card.next{
-                        transform: scale(1) translateX(110%);
-                        opacity: 0.6;
+
+                    .v-card-text {
+                        padding: 0;
+                        line-height: 1.6;
+                        font-size: 0.95rem;
+                        margin-bottom: 1rem;
                     }
+                    .v-card-actions{
+                        display: flex;
+                        flex-direction: column;
+                        padding: 0;
+                        min-height: 0;
+
+                        .v-btn{
+                            margin: 0;
+                        }
+                    }
+                    .v-chip-group{
+                        :deep(.v-slide-group__content) {
+                            justify-content: center;
+                        }
+                    }
+                }
+                .sep-projects-card.prev{
+                    transform: translateX(-150%) scale(.8);
+                    left: 50%;
+                    opacity: .2;
+                }
+                .sep-projects-card.active{
+                    transform: translateX(-50%) scale(1);
+                    left: 50%;
+                    opacity: 1;
+                }
+                .sep-projects-card.next{
+                    transform: translateX(50%) scale(.8);
+                    left: 50%;
+                    opacity: .2;
                 }
             }
         }
-
         .skills{
+            scroll-margin-top: 80px;
+            min-height: 100vh; 
             display: flex;
             flex-direction: column;
-            justify-content: start;
             align-items: center;
-            height: 100vh;
-            scroll-margin-top: 100px;
-
-            margin: 50px;
-            padding: 15px;
-            gap: 25px;
+            text-align: center;
+            padding: 20px;
             color: white;
+
+            h1 {
+                margin-bottom: 2rem;
+                font-size: 1.8rem;
+            }
 
             .s-content{
                 width: 100%;
-                max-height: fit-content;
+                display: flex;
+                flex-direction: column;
 
-                #s-content-skills{
-                    background-color: transparent;
-                    border: 1px solid white;
+                .s-skills{
+                    background-color: rgba(255, 255, 255, 0.05);
+                    border: 1px solid cyan;
                     color: white;
-                    padding: 10px;
+                    padding: 1rem;
+                    text-align: left;
+                    
+                    .v-card-title, 
+                    .v-list-item-title,
+                    .v-card-subtitle {
+                        white-space: normal !important;
+                        word-wrap: break-word;
+                        line-height: 1.4;
+                        font-size: 1rem;
+                        padding: 2rem 0 0 0;
+                        display: block;
+                        font-weight: bold;
+                    }
+
+                    .v-card-title {
+                        padding: 0 0 2rem 0;
+                        font-size: 1.2rem;
+                    }
+
+                    .v-card-subtitle {
+                        color: cyan;
+                        font-weight: normal;
+                        font-size: 1rem;
+                        padding: 0 0 1rem 0;
+                    }
+
+                    .v-card-text {
+                        padding: 0; 
+                        line-height: 1.6;
+                        font-size: 0.95rem;
+
+                        .v-list-item-title{
+                            padding: 0;
+                        }
+                    }
                 }
 
-                #s-content-skills-images{
-                    background-color: transparent;
-                    border: 1px solid white;
+                .s-skills-images{
+                    background-color: rgba(255, 255, 255, 0.05);
+                    border: 1px solid cyan;
                     color: white;
-                    padding: 10px;
+                    padding: .5rem;
                     
                     .v-img{
                         height: 10vh;
@@ -620,232 +754,120 @@ import emailjs from '@emailjs/browser';
                 }
             }
         }
-
         .about-me{
+            scroll-margin-top: 80px;
+            min-height: 100vh; 
             display: flex;
             flex-direction: column;
-            justify-content: start;
             align-items: center;
-            height: 100vh;
-            scroll-margin-top: 100px;
-            
-            margin: 50px;
-            padding: 15px;
-            gap: 25px;
+            text-align: center;
+            padding: 20px;
             color: white;
+
+            h1 {
+                margin-bottom: 2rem;
+                font-size: 1.8rem;
+            }
 
             .am-content{
                 width: 100%;
-                max-height: fit-content;
 
-                #am-content-summary{
-                    background-color: transparent;
-                    border: 1px solid white;
+                .am-summary, 
+                .am-awards-and-certification, 
+                .am-education, 
+                .am-language {
+                    background-color: rgba(255, 255, 255, 0.05);
+                    border: 1px solid cyan;
                     color: white;
-                    padding: 10px;
-                }
+                    padding: 1rem;
+                    text-align: left;
 
-                #am-content-awards-and-certification{
-                    background-color: transparent;
-                    border: 1px solid white;
-                    color: white;
-                    padding: 10px;
-
-                    .v-list {
-                        background-color: transparent;
-                        color: white;
+                    .v-card-title, 
+                    .v-list-item-title,
+                    .v-card-subtitle {
+                        white-space: normal !important;
+                        word-wrap: break-word;
+                        line-height: 1.4;
+                        font-size: 1rem;
+                        padding: 2rem 0 0 0;
+                        display: block;
+                        font-weight: bold;
                     }
-                }
 
-                .v-col{
-                    display: flex;
-                    flex-direction: column;
-                    gap: 25px;
-                    
-                    #am-content-education{
-                        background-color: transparent;
-                        border: 1px solid white;
-                        color: white;
-                        padding: 10px;
+                    .v-card-title {
+                        padding: 0 0 2rem 0;
+                        font-size: 1.2rem;
                     }
-    
-                    #am-content-language{
-                        background-color: transparent;
-                        border: 1px solid white;
-                        color: white;
-                        padding: 10px;
+
+                    .v-card-subtitle {
+                        color: cyan;
+                        font-weight: normal;
+                        font-size: 1rem;
+                        padding: 0 0 1rem 0;
+                    }
+
+                    .v-card-text {
+                        padding: 0;
+                        line-height: 1.6;
+                        font-size: 0.95rem;
+
+                        .v-list-item-title{
+                            padding: 0;
+                        }
                     }
                 }
             }
         }
-
         .contact-me{
+            scroll-margin-top: 80px;
+            min-height: 100vh; 
             display: flex;
             flex-direction: column;
-            justify-content: start;
             align-items: center;
-            height: 100vh;
-            scroll-margin-top: 100px;
-            
-            margin: 50px;
-            padding: 15px;
-            gap: 25px;
+            text-align: center;
+            padding: 20px;
             color: white;
             
             .cm-content{
-                width: 80%;
-                max-height: fit-content;
-            }
-            #cm-content-form{
-                background-color: transparent;
-                border: 1px solid white;
-                color: white;
-                padding: 10px;
-                width: auto;
-                height: 100%;
-                text-align: center;
-                padding: 50px;
+                width: 100%;
 
-                // error messaage color
-                :deep(.v-input--error .v-messages__message) {
-                    color: #FF5252 !important;
-                }
+                .cm-form{
+                    background-color: rgba(255, 255, 255, 0.05);
+                    border: 1px solid cyan;
+                    color: white;
+                    padding: 1.5rem;
+                    display: block; 
 
-                // label color
-                :deep(.v-input--error .v-label) {
-                    color: #FF5252 !important;
-                }
-
-                // border color
-                :deep(.v-input--error .v-field__outline) {
-                    color: #FF5252 !important; /* This changes the border color */
-                }
-
-                // text cursor and input text color
-                :deep(.v-input--error .v-field__input) {
-                    caret-color: #FF5252 !important;
-                }
-            }
-        }
-
-        @media (max-width: 1200px) {
-            .home{
-                scroll-margin-top: 120px;
-                .h-content{                    
-                    #h-container {
-                        h5{
-                            margin-top: 0vh;
-                        }
-                        h1{
-                            font-size: 400%;
-                            display: flex;
-                            text-align: center;
-                        }
-                        h3{
-                            font-size: 150%;
-                            text-align: center;
-                        }
-                        .h-button{
-                            margin-top: 0%;
-                            display: flex;
-                            flex-direction: column;
-                            gap: 20px;
-                        }
-                    }
-                }
-            }
-            .professional-experiece{
-                margin: 0;
-                gap: 0;
-                scroll-margin-top: 65px;
-
-                h1{
-                    text-align: center;
-                }
-            }
-            .software-engineering-projects{
-                margin: 0;
-                gap: 0;
-                scroll-margin-top: 65px;
-
-                h1{
-                    text-align: center;
-                }
-
-                .sep-content{
-                    position: relative;
-                    overflow: hidden;
-                    display: flex;
-                    align-items: start;
-
-                    .sep-projects{
-                        .sep-projects-card{
-                            padding: 0;
-                            width: 80%;
-                            margin-bottom: 15%;
-                            margin-top: 150%;
-                        }
-                        .sep-projects-card.prev{
-                            opacity: 0;
-                        }
-                        .sep-projects-card.next{
-                            opacity: 0;
-                        }
-                    }
-                }
-            }
-            .skills{
-                margin: 0;
-                gap: 0;
-                scroll-margin-top: 65px;
-
-                h1{
-                    text-align: center;
-                }
-
-                .s-content{
-                    display: flex;
-                    flex-direction: column;
-
-                    #s-content-skills{
-                        display: flex;
-                        flex-direction: column;
+                    .v-card-title {
+                        margin-bottom: 2rem;
+                        font-size: 1.8rem;
                     }
 
-                    #s-content-skills-images{
-                        .v-img{
-                            height: 50px;
-                            width: 50px;
-                        }
+                    :deep(.v-text-field), :deep(.v-textarea) {
+                        width: 100%;
                     }
-                }
-            }
-            .about-me{
-                height: 200vh;
-                margin: 0;
-                gap: 0;
-                scroll-margin-top: 65px;
 
-                h1{
-                    text-align: center;
-                }
-            }
-            .contact-me{
-                margin: 0;
-                scroll-margin-top: 65px;
+                    // Error message colors
+                    :deep(.v-input--error .v-messages__message) {
+                        color: #FF5252 !important;
+                    }
 
-                h1{
-                    text-align: center;
-                }
-                
-                .cm-content{
-                    width: 100%;
-                }
-                #cm-content-form{
-                    padding: 25px;
+                    // Label color
+                    :deep(.v-input--error .v-label) {
+                        color: #FF5252 !important;
+                    }
+
+                    // Border color
+                    :deep(.v-input--error .v-field__outline) {
+                        color: #FF5252 !important;
+                    }
+    
+                    // text cursor and input text color
+                    :deep(.v-input--error .v-field__input) {
+                        caret-color: #FF5252 !important;
+                    }
                 }
             }
         }
     }
-
 </style>
