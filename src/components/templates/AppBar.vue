@@ -1,7 +1,7 @@
 <template>
     <v-app-bar class="appbar-main-container">
         <!-- NOTE Title -->
-        <v-app-bar-title class="title" @click="navigationStore.gotoSection('homeRef'), drawer = !drawer">
+        <v-app-bar-title class="title" @click="navigationStore.gotoSection('homeRef'), drawer = false">
             Software <span id="title-gene">GENE</span>gineer
         </v-app-bar-title>
 
@@ -16,7 +16,7 @@
 
     <v-navigation-drawer v-model="drawer" location="top" temporary class="navigation-drawer">
         <v-list>
-            <v-list-item v-for="(navigation, navigationIndex) in navigations" :key="navigationIndex" @click="navigationStore.gotoSection(navigation.section), drawer = !drawer">{{ navigation.text }}</v-list-item>
+            <v-list-item v-for="(navigation, navigationIndex) in navigations" :key="navigationIndex" @click="navigationStore.gotoSection(navigation.section), drawer = false">{{ navigation.text }}</v-list-item>
         </v-list>
     </v-navigation-drawer>
 </template>
