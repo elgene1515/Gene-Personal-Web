@@ -87,55 +87,153 @@
             <v-row class="s-content">
                 <v-col>
                     <v-card class="s-skills">
-                        <v-card-title>Technologies</v-card-title>
+                        <v-card-title>Languages</v-card-title>
                         <v-card-text>
-                            <v-list-item-title>Languages</v-list-item-title>
-                            <v-list-item>
-                                - JavaScript (ES6+), PHP, Java, SQL, HTML5, CSS3, Python
-                            </v-list-item>
-                            <v-list-item-title>Frameworks/Libraries</v-list-item-title>
-                            <v-list-item>
-                                - Laravel, Vue.js, Node.js, Express.js
-                            </v-list-item>
-                            <v-list-item-title>Databases</v-list-item-title>
-                            <v-list-item>
-                                - MySQL, MSSQL
-                            </v-list-item>
-                            <v-list-item-title>Tools & Technologies</v-list-item-title>
-                            <v-list-item>
-                                - Git, RESTful APIs, Unity Game Engine, Agile
-                            </v-list-item>
-                            <v-list-item-title>Design/Multimedia</v-list-item-title>
-                            <v-list-item>
-                                - Adobe Illustrator, Photoshop, Premiere Pro (UI/UX focused)
-                            </v-list-item>
+                            <div class="s-skills-card">
+                                <div class="s-skills-card-icon-box">
+                                    <v-img src="logo/JavaScript.png"></v-img>
+                                </div>
+                                <span class="s-skills-card-name">JavaScript</span>
+                            </div>
+
+                            <div class="s-skills-card">
+                                <div class="s-skills-card-icon-box">
+                                    <v-img src="logo/PHP.png"></v-img>
+                                </div>
+                                <span class="s-skills-card-name">PHP</span>
+                            </div>
+
+                            <div class="s-skills-card">
+                                <div class="s-skills-card-icon-box">
+                                    <v-img src="logo/Java.png"></v-img>
+                                </div>
+                                <span class="s-skills-card-name">Java</span>
+                            </div>
+
+                            <div class="s-skills-card">
+                                <div class="s-skills-card-icon-box">
+                                    <v-img src="logo/SQL.png"></v-img>
+                                </div>
+                                <span class="s-skills-card-name">SQL</span>
+                            </div>
+
+                            <div class="s-skills-card">
+                                <div class="s-skills-card-icon-box">
+                                    <v-img src="logo/HTML5.png"></v-img>
+                                </div>
+                                <span class="s-skills-card-name">HTML5</span>
+                            </div>
+
+                            <div class="s-skills-card">
+                                <div class="s-skills-card-icon-box">
+                                    <v-img src="logo/CSS3.png"></v-img>
+                                </div>
+                                <span class="s-skills-card-name">CSS3</span>
+                            </div>
+                            
+                            <div class="s-skills-card">
+                                <div class="s-skills-card-icon-box">
+                                    <v-img src="logo/Python.png"></v-img>
+                                </div>
+                                <span class="s-skills-card-name">Python</span>
+                            </div>
                         </v-card-text>
-                    </v-card>
-                </v-col>
-    
-                <v-col>
-                    <v-card class="s-skills-images">
-                        <v-row>
-                            <v-col><v-img src="logo/HTML5.png"></v-img></v-col>
-                            <v-col><v-img src="logo/CSS3.png"></v-img></v-col>
-                            <v-col><v-img src="logo/JavaScript.png"></v-img></v-col>
-                            <v-col><v-img src="logo/Java.png"></v-img></v-col>
-                            <v-col><v-img src="logo/PHP.png"></v-img></v-col>
-                            <v-col><v-img src="logo/Python.png"></v-img></v-col>
-                            <v-col><v-img src="logo/SQL.png"></v-img></v-col>
-                            <v-col><v-img src="logo/Laravel.png"></v-img></v-col>
-                            <v-col><v-img src="logo/VueJS.png"></v-img></v-col>
-                            <v-col><v-img src="logo/NodeJS.png"></v-img></v-col>
-                            <v-col><v-img src="logo/ExpressJS.png"></v-img></v-col>
-                            <v-col><v-img src="logo/MySQL.png"></v-img></v-col>
-                            <v-col><v-img src="logo/MSSQL.png"></v-img></v-col>
-                            <v-col><v-img src="logo/GitHub.png"></v-img></v-col>
-                            <v-col><v-img src="logo/GitLab.png"></v-img></v-col>
-                            <v-col><v-img src="logo/Unity.png"></v-img></v-col>
-                            <v-col><v-img src="logo/AdobeIllustrator.png"></v-img></v-col>
-                            <v-col><v-img src="logo/AdobePhotoshop.png"></v-img></v-col>
-                            <v-col><v-img src="logo/AdobePremierPro.png"></v-img></v-col>
-                        </v-row>
+
+                        <v-card-title>Frameworks/Libraries</v-card-title>
+                        <v-card-text>
+                            <div class="s-skills-card">
+                                <div class="s-skills-card-icon-box">
+                                    <v-img src="logo/Laravel.png"></v-img>
+                                </div>
+                                <span class="s-skills-card-name">Laravel</span>
+                            </div>
+
+                            <div class="s-skills-card">
+                                <div class="s-skills-card-icon-box">
+                                    <v-img src="logo/VueJS.png"></v-img>
+                                </div>
+                                <span class="s-skills-card-name">VueJS</span>
+                            </div>
+
+                            <div class="s-skills-card">
+                                <div class="s-skills-card-icon-box">
+                                    <v-img src="logo/NodeJS.png"></v-img>
+                                </div>
+                                <span class="s-skills-card-name">NodeJS</span>
+                            </div>
+
+                            <div class="s-skills-card">
+                                <div class="s-skills-card-icon-box">
+                                    <v-img src="logo/ExpressJS.png"></v-img>
+                                </div>
+                                <span class="s-skills-card-name">ExpressJS</span>
+                            </div>
+                        </v-card-text>
+                        
+                        <v-card-title>Databases</v-card-title>
+                        <v-card-text>
+                            <div class="s-skills-card">
+                                <div class="s-skills-card-icon-box">
+                                    <v-img src="logo/MySQL.png"></v-img>
+                                </div>
+                                <span class="s-skills-card-name">MySQL</span>
+                            </div>
+
+                            <div class="s-skills-card">
+                                <div class="s-skills-card-icon-box">
+                                    <v-img src="logo/MSSQL.png"></v-img>
+                                </div>
+                                <span class="s-skills-card-name">MSSQL</span>
+                            </div>
+                        </v-card-text>
+
+                        <v-card-title>Tools & Technologies</v-card-title>
+                        <v-card-text>
+                            <div class="s-skills-card">
+                                <div class="s-skills-card-icon-box">
+                                    <v-img src="logo/GitHub.png"></v-img>
+                                </div>
+                                <span class="s-skills-card-name">GitHub</span>
+                            </div>
+
+                            <div class="s-skills-card">
+                                <div class="s-skills-card-icon-box">
+                                    <v-img src="logo/GitLab.png"></v-img>
+                                </div>
+                                <span class="s-skills-card-name">GitLab</span>
+                            </div>
+                            
+                            <div class="s-skills-card">
+                                <div class="s-skills-card-icon-box">
+                                    <v-img src="logo/Unity.png"></v-img>
+                                </div>
+                                <span class="s-skills-card-name">Unity</span>
+                            </div>
+                        </v-card-text>
+                        
+                        <v-card-title>Design/Multimedia</v-card-title>
+                        <v-card-text>
+                            <div class="s-skills-card">
+                                <div class="s-skills-card-icon-box">
+                                    <v-img src="logo/AdobeIllustrator.png"></v-img>
+                                </div>
+                                <span class="s-skills-card-name">Adobe Illustrator</span>
+                            </div>
+                            
+                            <div class="s-skills-card">
+                                <div class="s-skills-card-icon-box">
+                                    <v-img src="logo/AdobePhotoshop.png"></v-img>
+                                </div>
+                                <span class="s-skills-card-name">AdobePhotoshop</span>
+                            </div>
+                            
+                            <div class="s-skills-card">
+                                <div class="s-skills-card-icon-box">
+                                    <v-img src="logo/AdobePremierPro.png"></v-img>
+                                </div>
+                                <span class="s-skills-card-name">AdobePremierPro</span>
+                            </div>
+                        </v-card-text>
                     </v-card>
                 </v-col>
             </v-row>
@@ -700,11 +798,8 @@ import emailjs from '@emailjs/browser';
                     border: 1px solid cyan;
                     color: white;
                     padding: 1rem;
-                    text-align: left;
                     
-                    .v-card-title, 
-                    .v-list-item-title,
-                    .v-card-subtitle {
+                    .v-card-title{
                         white-space: normal !important;
                         word-wrap: break-word;
                         line-height: 1.4;
@@ -712,44 +807,55 @@ import emailjs from '@emailjs/browser';
                         padding: 2rem 0 0 0;
                         display: block;
                         font-weight: bold;
-                    }
-
-                    .v-card-title {
                         padding: 0 0 2rem 0;
                         font-size: 1.2rem;
-                    }
-
-                    .v-card-subtitle {
-                        color: cyan;
-                        font-weight: normal;
-                        font-size: 1rem;
-                        padding: 0 0 1rem 0;
                     }
 
                     .v-card-text {
                         padding: 0; 
                         line-height: 1.6;
                         font-size: 0.95rem;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: center;
 
-                        .v-list-item-title{
-                            padding: 0;
+                        .s-skills-card{
+                            height: 8rem;
+                            width: 8rem;
+
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 1rem;
+
+                            background-color: #0d1b2a;
+                            border: 1px solid rgba(0, 255, 255, 0.3);
+                            border-radius: 12px;
+
+                            .s-skills-card-icon-box{
+                                height: 4rem;
+                                width: fit-content;
+                                min-width: 4rem;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin-bottom: 1rem;
+                                
+                                .v-img{
+                                    object-fit: contain;
+                                    filter: grayscale(100%);
+                                }
+                                .v-img:hover{
+                                    filter: grayscale(0);
+                                }
+                            }
+                            .s-skills-card-name{
+                                color: white;
+                                font-size: 0.8rem;
+                            }
                         }
-                    }
-                }
-
-                .s-skills-images{
-                    background-color: rgba(255, 255, 255, 0.05);
-                    border: 1px solid cyan;
-                    color: white;
-                    padding: .5rem;
-                    
-                    .v-img{
-                        height: 10vh;
-                        width: 10vh;
-                        filter: grayscale(100%);
-                    }
-                    .v-img:hover{
-                        filter: grayscale(0);
                     }
                 }
             }
