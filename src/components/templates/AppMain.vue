@@ -224,14 +224,14 @@
                                 <div class="s-skills-card-icon-box">
                                     <v-img src="logo/AdobePhotoshop.png"></v-img>
                                 </div>
-                                <span class="s-skills-card-name">AdobePhotoshop</span>
+                                <span class="s-skills-card-name">Adobe Photoshop</span>
                             </div>
                             
                             <div class="s-skills-card">
                                 <div class="s-skills-card-icon-box">
                                     <v-img src="logo/AdobePremierPro.png"></v-img>
                                 </div>
-                                <span class="s-skills-card-name">AdobePremierPro</span>
+                                <span class="s-skills-card-name">Adobe PremierPro</span>
                             </div>
                         </v-card-text>
                     </v-card>
@@ -819,6 +819,7 @@ import emailjs from '@emailjs/browser';
                         flex-wrap: wrap;
                         align-items: center;
                         justify-content: center;
+                        gap: 0.5rem;
 
                         .s-skills-card{
                             height: 8rem;
@@ -830,7 +831,7 @@ import emailjs from '@emailjs/browser';
                             justify-content: center;
                             padding: 1rem;
 
-                            background-color: #0d1b2a;
+                            background-color: rgba(255, 255, 255, 0.1); 
                             border: 1px solid rgba(0, 255, 255, 0.3);
                             border-radius: 12px;
 
@@ -845,10 +846,6 @@ import emailjs from '@emailjs/browser';
                                 
                                 .v-img{
                                     object-fit: contain;
-                                    filter: grayscale(100%);
-                                }
-                                .v-img:hover{
-                                    filter: grayscale(0);
                                 }
                             }
                             .s-skills-card-name{
