@@ -293,7 +293,6 @@
                 <v-col>
                     <v-card class="am-education">
                         <v-card-title><strong>EDUCATION</strong></v-card-title>
-                    
                         <v-card-text>
                             <v-list-item-title>Bachelor of Science in Computer Science</v-list-item-title>
                             <v-list-item>
@@ -306,7 +305,6 @@
                                 - Magna Cum Laude
                             </v-list-item>
                         </v-card-text>
-                
                     </v-card>
                 </v-col>
 
@@ -875,47 +873,52 @@ import emailjs from '@emailjs/browser';
             .am-content{
                 width: 100%;
 
-                .am-summary, 
-                .am-awards-and-certification, 
-                .am-education, 
-                .am-language {
-                    background-color: rgba(255, 255, 255, 0.05);
-                    border: 1px solid cyan;
-                    color: white;
-                    padding: 1rem;
-                    text-align: left;
+                .v-col{
+                    flex: 0 0 100% !important;
+                    max-width: 100% !important;
 
-                    .v-card-title, 
-                    .v-list-item-title,
-                    .v-card-subtitle {
-                        white-space: normal !important;
-                        word-wrap: break-word;
-                        line-height: 1.4;
-                        font-size: 1rem;
-                        padding: 2rem 0 0 0;
-                        display: block;
-                        font-weight: bold;
-                    }
-
-                    .v-card-title {
-                        padding: 0 0 2rem 0;
-                        font-size: 1.2rem;
-                    }
-
-                    .v-card-subtitle {
-                        color: cyan;
-                        font-weight: normal;
-                        font-size: 1rem;
-                        padding: 0 0 1rem 0;
-                    }
-
-                    .v-card-text {
-                        padding: 0;
-                        line-height: 1.6;
-                        font-size: 0.95rem;
-
-                        .v-list-item-title{
+                    .am-summary, 
+                    .am-awards-and-certification, 
+                    .am-education, 
+                    .am-language {
+                        background-color: rgba(255, 255, 255, 0.05);
+                        border: 1px solid cyan;
+                        color: white;
+                        padding: 1rem;
+                        text-align: left;
+    
+                        .v-card-title, 
+                        .v-list-item-title,
+                        .v-card-subtitle {
+                            white-space: normal !important;
+                            word-wrap: break-word;
+                            line-height: 1.4;
+                            font-size: 1rem;
+                            padding: 2rem 0 0 0;
+                            display: block;
+                            font-weight: bold;
+                        }
+    
+                        .v-card-title {
+                            padding: 0 0 2rem 0;
+                            font-size: 1.2rem;
+                        }
+    
+                        .v-card-subtitle {
+                            color: cyan;
+                            font-weight: normal;
+                            font-size: 1rem;
+                            padding: 0 0 1rem 0;
+                        }
+    
+                        .v-card-text {
                             padding: 0;
+                            line-height: 1.6;
+                            font-size: 0.95rem;
+    
+                            .v-list-item-title{
+                                padding: 0;
+                            }
                         }
                     }
                 }
