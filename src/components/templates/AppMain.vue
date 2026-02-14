@@ -471,7 +471,11 @@ import emailjs from '@emailjs/browser';
         const hiringDateHRD = new Date('2025-02-21')
         var years = currentDate.getFullYear() - hiringDateHRD.getFullYear();
         var months = currentDate.getMonth() - hiringDateHRD.getMonth();
+        var days = currentDate.getDate() - hiringDateHRD.getDate() + 1;
 
+        if(days < 0){
+            months -= 1;
+        }
         if(months < 0){
             years = years - 1;
             months = months + 12;
@@ -479,7 +483,8 @@ import emailjs from '@emailjs/browser';
 
         return {
             'years': years,
-            'months': months
+            'months': months,
+            'days' :days
         }
     });
 
@@ -801,12 +806,10 @@ import emailjs from '@emailjs/browser';
                         white-space: normal !important;
                         word-wrap: break-word;
                         line-height: 1.4;
-                        font-size: 1rem;
-                        padding: 2rem 0 0 0;
                         display: block;
                         font-weight: bold;
-                        padding: 0 0 2rem 0;
                         font-size: 1.2rem;
+                        padding: 2rem 0 1rem 0;
                     }
 
                     .v-card-text {
@@ -820,28 +823,28 @@ import emailjs from '@emailjs/browser';
                         gap: 0.5rem;
 
                         .s-skills-card{
-                            height: 8rem;
-                            width: 8rem;
+                            height: 7rem;
+                            width: 7rem;
 
                             display: flex;
                             flex-direction: column;
                             align-items: center;
                             justify-content: center;
-                            padding: 1rem;
+                            padding: 0.5rem;
 
                             background-color: rgba(255, 255, 255, 0.1); 
                             border: 1px solid rgba(0, 255, 255, 0.3);
                             border-radius: 12px;
 
                             .s-skills-card-icon-box{
-                                height: 4rem;
+                                height: 3rem;
                                 width: fit-content;
-                                min-width: 4rem;
+                                min-width: 3rem;
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
                                 margin-bottom: 1rem;
-                                
+
                                 .v-img{
                                     object-fit: contain;
                                 }
@@ -900,7 +903,7 @@ import emailjs from '@emailjs/browser';
                         }
     
                         .v-card-title {
-                            padding: 0 0 2rem 0;
+                            padding: 0 0 1rem 0;
                             font-size: 1.2rem;
                         }
     
