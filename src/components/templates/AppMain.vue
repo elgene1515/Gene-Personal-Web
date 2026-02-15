@@ -993,12 +993,18 @@ import emailjs from '@emailjs/browser';
     // The starting state (Invisible and slightly lower)
     .reveal-on-scroll {
     opacity: 0;
-    transform: scale(0);
-    transition: opacity 0.5s ease-in, transform 0.6s ease-out;
+    // Use a smaller translateY so it doesn't push the section off-screen
+    // Use scale(0.9) instead of 0 so the browser still "sees" the section height
+    transform: scale(0.9) translateY(-35px); 
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    
+    // This is the magic: prevents the "jump"
+    pointer-events: none; 
 
     &.is-visible {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(1) translateY(0);
+        pointer-events: auto;
     }
 }
 </style>
