@@ -1,7 +1,7 @@
 <template>
     <v-main class="main-container">
         <!-- SECTION Home -->
-        <div ref="homeRef" class="home">
+        <div ref="homeRef" class="home reveal-on-scroll" v-intersect="{handler: onIntersect, options: { threshold: 0.2 }}">
             <v-row class="h-content">
                 <v-col>
                     <v-container class="h-container">
@@ -20,7 +20,7 @@
         </div>
 
         <!-- SECTION Professional Experience -->
-        <div ref="professioinalExperienceRef" class="professional-experiece">
+        <div ref="professioinalExperienceRef" class="professional-experiece reveal-on-scroll" v-intersect="{handler: onIntersect, options: { threshold: 0.2 }}"">
             <h1>PROFESSIONAL EXPERIENCE</h1>
             <v-row class="pe-content">
                 <v-col>
@@ -53,7 +53,7 @@
         </div>
 
         <!-- SECTION Software Engineering Projects -->
-        <div ref="softwareEngineeringProjectRef" class="software-engineering-projects">
+        <div ref="softwareEngineeringProjectRef" class="software-engineering-projects reveal-on-scroll" v-intersect="{handler: onIntersect, options: { threshold: 0.2 }}">
             <h1>SOFTWARE ENGINEERING PROJECTS</h1>
             <v-row class="sep-content">
                 <v-col>
@@ -82,7 +82,7 @@
         </div>
 
         <!-- SECTION Skills -->
-        <div ref="skillsRef" class="skills">
+        <div ref="skillsRef" class="skills reveal-on-scroll" v-intersect="{handler: onIntersect, options: { threshold: 0.2 }}">
             <h1>SKILLS</h1>
             <v-row class="s-content">
                 <v-col>
@@ -240,7 +240,7 @@
         </div>
 
         <!-- SECTION About Me -->
-        <div ref="aboutMeRef" class="about-me">
+        <div ref="aboutMeRef" class="about-me reveal-on-scroll" v-intersect="{handler: onIntersect, options: { threshold: 0.2 }}">
             <h1>ABOUT ME</h1>
             <v-row class="am-content">
                 <v-col>
@@ -325,7 +325,7 @@
         </div>
 
         <!-- SECTION Contact Me -->
-        <div ref="contactMeRef" class="contact-me">
+        <div ref="contactMeRef" class="contact-me reveal-on-scroll" v-intersect="{handler: onIntersect, options: { threshold: 0.2 }}">
             <v-row class="cm-content">
                 <v-col>
                     <v-card class="cm-form">
@@ -544,6 +544,16 @@ import emailjs from '@emailjs/browser';
             formRef.value.reset();
         }
     };
+
+    // This function adds the 'is-visible' class as soon as the div hits the screen
+    function onIntersect(isIntersecting, entries) {
+        if (isIntersecting) {
+            entries[0].target.classList.add('is-visible');
+        } else {
+            // Element left the viewport
+            entries[0].target.classList.remove('is-visible');
+        }
+    }
 </script>
 
 <style lang="scss" scoped>
@@ -979,4 +989,16 @@ import emailjs from '@emailjs/browser';
             }
         }
     }
+
+    // The starting state (Invisible and slightly lower)
+    .reveal-on-scroll {
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.5s ease-in, transform 0.6s ease-out;
+
+    &.is-visible {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 </style>
