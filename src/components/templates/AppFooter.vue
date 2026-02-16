@@ -9,6 +9,26 @@
                     <i class="subtitle">"Full Stack Engineer. Occasional Bug Creator. Eternal Problem Solver."</i>
                 </v-col>
 
+                <v-col class="socials-container">
+                    <b>Socials</b>
+                    
+                    <div class="socialButton">
+                        <v-icon v-for="(onlinePlatform, index) in onlinePlatforms" :key="index" @click="openOnlineProfiles(onlinePlatform.name)">
+                            {{onlinePlatform.icon}}
+                        </v-icon>
+                    </div>
+                </v-col>
+                
+                <v-col class="contacts-container">
+                    <b>Contacts</b>
+                    
+                    <ul>
+                        <li>(+63) 993-5637-866</li>
+                        <li>elgenereyes1515@gmail.com</li>
+                        <li>Tanza, Cavite, PH</li>
+                    </ul>
+                </v-col>
+                
                 <v-col class="navigation-container">
                     <b>Navigation</b>
                     
@@ -22,28 +42,8 @@
                         </ul>
                     </nav>
                 </v-col>
-
-                <v-col class="contacts-container">
-                    <b>Contacts</b>
-
-                    <ul>
-                        <li>(+63) 993-5637-866</li>
-                        <li>elgenereyes1515@gmail.com</li>
-                        <li>Tanza, Cavite, PH</li>
-                    </ul>
-                </v-col>
-
-                <v-col class="socials-container">
-                    <b>Socials</b>
-                    
-                    <div class="socialButton">
-                        <v-icon v-for="(onlinePlatform, index) in onlinePlatforms" :key="index" @click="openOnlineProfiles(onlinePlatform.name)">
-                            {{onlinePlatform.icon}}
-                        </v-icon>
-                    </div>
-                </v-col>
             </v-row>
-
+            
             <v-row>
                 <v-col>
                     <div class="copyright-container">
@@ -126,7 +126,7 @@
                 }
             }
 
-            .navigation-container{
+            .socials-container{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -139,25 +139,18 @@
                     border-bottom: 1px solid rgba(0, 255, 255, 0.3);
                 }
 
-                nav{
+                .socialButton {
+                    display: flex;
+                    gap: 1.5rem;
                     margin-top: 0.5rem;
                     
-                    ul {
-                        list-style: none;
-                        padding: 0;
-                        text-align: center;
+                    .v-icon {
+                        cursor: pointer;
+                        transition: transform 0.2s;
                         
-                        li {
-                            margin-bottom: 0.5rem;
-                            font-size: 0.9rem;
-                            opacity: 0.8;
-                            cursor: pointer;
-                            transition: 0.3s;
-            
-                            &:hover {
-                                opacity: 1;
-                                color: cyan;
-                            }
+                        &:hover {
+                            color: cyan;
+                            transform: translateY(-3px);
                         }
                     }
                 }
@@ -197,7 +190,7 @@
                 }
             }
 
-            .socials-container{
+            .navigation-container{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -210,18 +203,25 @@
                     border-bottom: 1px solid rgba(0, 255, 255, 0.3);
                 }
 
-                .socialButton {
-                    display: flex;
-                    gap: 1.5rem;
+                nav{
                     margin-top: 0.5rem;
                     
-                    .v-icon {
-                        cursor: pointer;
-                        transition: transform 0.2s;
+                    ul {
+                        list-style: none;
+                        padding: 0;
+                        text-align: center;
                         
-                        &:hover {
-                            color: cyan;
-                            transform: translateY(-3px);
+                        li {
+                            margin-bottom: 0.5rem;
+                            font-size: 0.9rem;
+                            opacity: 0.8;
+                            cursor: pointer;
+                            transition: 0.3s;
+            
+                            &:hover {
+                                opacity: 1;
+                                color: cyan;
+                            }
                         }
                     }
                 }
@@ -238,6 +238,19 @@
                     display: block;
                     text-align: center;
                 }
+            }
+        }
+    }
+
+    // 640px or 768px
+    // 1024px
+    // 1536px+
+
+    @media (min-width: 1280px) {
+        .footer-main-container {
+            .v-row{
+                display: flex;
+                flex-direction: row;
             }
         }
     }
