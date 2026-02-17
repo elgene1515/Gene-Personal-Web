@@ -557,7 +557,6 @@ import emailjs from '@emailjs/browser';
 </script>
 
 <style lang="scss" scoped>
-    // TODO Mobile (Portrait)	0px to 480px	Your base styles (no media query needed).
     .main-container {
         background-color: #2C3E50;
 
@@ -803,8 +802,6 @@ import emailjs from '@emailjs/browser';
 
             .s-content{
                 width: 100%;
-                display: flex;
-                flex-direction: column;
 
                 .s-skills{
                     background-color: rgba(255, 255, 255, 0.05);
@@ -988,23 +985,290 @@ import emailjs from '@emailjs/browser';
                 }
             }
         }
+        
+        .reveal-on-scroll {
+            opacity: 0;
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            pointer-events: none; 
+        
+            &.is-visible {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
     }
 
-    // The starting state (Invisible and slightly lower)
-    .reveal-on-scroll {
-    opacity: 0;
-    // Use a smaller translateY so it doesn't push the section off-screen
-    // Use scale(0.9) instead of 0 so the browser still "sees" the section height
-    transform: scale(0.9) translateY(-35px); 
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    @media (min-width: 640px) {
+        .main-container {
+            .home{
+                .h-content{
+                    .h-container {
+                        h5 {
+                            font-size: 2rem;
+                        }
+
+                        h1 {
+                            font-size: 3rem;
+                        }
+
+                        h3 {
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+            .software-engineering-projects{
+                .sep-content{
+                    .left, .right{
+                        bottom: 280px;
+                    }
+                }
+            }
+            .about-me{
+                .am-content{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    
+                    .v-col{
+                        &:nth-child(1),
+                        &:nth-child(2){
+                            grid-column: 1 / span 2;
+                        }
     
-    // This is the magic: prevents the "jump"
-    pointer-events: none; 
-
-    &.is-visible {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-        pointer-events: auto;
+                        &:nth-child(3),
+                        &:nth-child(4) {
+                            grid-column: span 1;
+                        }
+                    }
+                }
+            }
+        }
     }
-}
+
+    @media (min-width: 1024px) {
+        .main-container {
+            .software-engineering-projects{
+                .sep-content{
+                    .left, .right{
+                        bottom: 300px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .main-container {
+            background-color: #2C3E50;
+
+            .home{
+                .h-content{
+                    .h-container {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        gap: 5rem; 
+
+                        h5 {
+                            font-size: 3rem;
+                        }
+
+                        h1 {
+                            font-size: 5rem;
+                        }
+
+                        h3 {
+                            font-size: 2rem;
+                        }
+
+                        .h-button {
+                            flex-direction: row;
+                        }
+                    }
+                }
+            }
+            .professional-experiece {
+                .pe-content {
+                    .pe-experience {
+                        .v-card-text {
+                            padding: 1rem 0;
+                        }
+                        .v-chip-group{
+                            :deep(.v-slide-group__content) {
+                                justify-content: left;
+                            }
+                        }
+                    }
+                }
+            }
+            .software-engineering-projects{
+                .sep-content{
+                    .left, .right{
+                        bottom: 450px;
+                    }
+                    .sep-projects-card{ 
+                        width: 30vw;
+                    }
+                    .sep-projects-card.prev{
+                        transform: translateX(-145%) scale(.8);
+                    }
+                    .sep-projects-card.next{
+                        transform: translateX(45%) scale(.8);
+                        left: 50%;
+                        opacity: .2;
+                    }
+                }
+            }
+            .about-me{
+                .am-content{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 0.5fr 0.5fr 1fr;
+                    
+                    .v-col{
+                        &:nth-child(1) {
+                            grid-column: 1 / span 2;
+                        }
+                        &:nth-child(2) {
+                            grid-column: 1 / span 1;
+                            grid-row: 2 / span 2;
+                        }
+                        &:nth-child(3) {
+                            grid-column: 2 / span 1;
+                            grid-row: 2 / span 1;
+                        }
+                        &:nth-child(4) {
+                            grid-column: 2 / span 1;
+                            grid-row: 3 / span 1;
+                        }
+                    }
+                }
+            }
+            .contact-me{
+                .cm-content{
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1536px) {
+        .main-container {
+            background-color: #2C3E50;
+
+            .home{
+                .h-content{
+                    .h-container {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        gap: 5rem; 
+                        h5 {
+                            font-size: 3rem;
+                        }
+                        h1 {
+                            font-size: 5rem;
+                        }
+                        h3 {
+                            font-size: 2rem;
+                        }
+                        .h-button {
+                            flex-direction: row;
+                        }
+                    }
+                }
+            }
+            .professional-experiece {
+                h1 {
+                    font-size: 2.3rem;
+                }
+                .pe-content {
+                    .pe-experience {
+                        .v-card-title {
+                            font-size: 1.7rem;
+                        }
+                    }
+                }
+            }
+            .software-engineering-projects{
+                h1 {
+                    font-size: 2.3rem;
+                }
+                .sep-content{
+                    .left, .right{
+                        bottom: 600px;
+                    }
+                    .sep-projects-card{ 
+                        width: 40vw;
+
+                        .v-card-title {
+                            font-size: 1.7rem;
+                        }
+                    }
+                    .sep-projects-card.prev{
+                        width: 25vw;
+                        transform: translateX(-175%) scale(.8);
+                    }
+                    .sep-projects-card.next{
+                        width: 25vw;
+                        transform: translateX(75%) scale(.8);
+                    }
+                }
+            }
+            .skills{
+                h1 {
+                    font-size: 2.3rem;
+                }
+                .s-content{
+                    .s-skills{
+                        .v-card-text {
+                            .s-skills-card{
+                                height: 10rem;
+                                width: 10rem;
+
+                                .s-skills-card-icon-box{
+                                    height: 3.5rem;
+                                    min-width: 3.5rem;
+                                }
+                                .s-skills-card-name{
+                                    font-size: 1.3rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .about-me{
+                h1 {
+                    font-size: 2.3rem;
+                }
+
+                .am-content{
+                    .v-col{
+                        .am-summary, 
+                        .am-awards-and-certification, 
+                        .am-education, 
+                        .am-language {
+                            .v-card-title {
+                                font-size: 1.7rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .contact-me{
+                .cm-content{
+                    .cm-form{
+                        .v-card-title {
+                            font-size: 2.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
 </style>
