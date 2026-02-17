@@ -236,11 +236,7 @@
         }
     }
 
-    // 640px or 768px
-    // 1024px
-    // 1536px+
-
-    @media (min-width: 1280px) {
+    @media (min-width: 1024px) {
         .footer-main-container {
             .v-row{
                 display: flex;
