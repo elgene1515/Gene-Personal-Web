@@ -57,7 +57,6 @@
 </script>
 
 <style lang="scss" scoped>
-    // NOTE Mobile (Portrait)	0px to 480px.
     .appbar-main-container , .navigation-drawer{
         top: 0;
         left: 0;
