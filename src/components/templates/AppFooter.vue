@@ -179,13 +179,7 @@
                         margin-bottom: 0.5rem;
                         font-size: 0.9rem;
                         opacity: 0.8;
-                        cursor: pointer;
                         transition: 0.3s;
-        
-                        &:hover {
-                            opacity: 1;
-                            color: cyan;
-                        }
                     }
                 }
             }
