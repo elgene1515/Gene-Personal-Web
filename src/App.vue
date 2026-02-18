@@ -12,7 +12,7 @@
 
         <!-- SECTION Footer -->
         <!-- NOTE Application main footer -->
-         <AppFooter></AppFooter>
+        <AppFooter></AppFooter>
         <!-- !SECTION Footer -->
     </v-app>
 </template>

@@ -67,6 +67,7 @@
         .title {
             font-weight: bold;
             min-width: fit-content;
+            cursor: pointer;
             
             #title-gene {
                 color: white;
