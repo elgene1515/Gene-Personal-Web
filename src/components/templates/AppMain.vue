@@ -5,7 +5,7 @@
             <v-row class="h-content">
                 <v-col>
                     <v-container class="h-container">
-                        <h5>Hello! I am</h5> 
+                        <h5>Hello World, I am</h5> 
         
                         <h1>Elgene John Reyes</h1>
                         
@@ -1106,7 +1106,7 @@ import emailjs from '@emailjs/browser';
             .software-engineering-projects{
                 .sep-content{
                     .left, .right{
-                        bottom: 450px;
+                        bottom: 600px;
                     }
                     .sep-projects-card{ 
                         width: 30vw;
@@ -1200,7 +1200,7 @@ import emailjs from '@emailjs/browser';
                 }
                 .sep-content{
                     .left, .right{
-                        bottom: 600px;
+                        bottom: 650px;
                     }
                     .sep-projects-card{ 
                         width: 40vw;
