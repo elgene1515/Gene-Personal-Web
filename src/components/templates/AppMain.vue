@@ -471,7 +471,7 @@ import emailjs from '@emailjs/browser';
         const hiringDateHRD = new Date('2025-02-21')
         var years = currentDate.getFullYear() - hiringDateHRD.getFullYear();
         var months = currentDate.getMonth() - hiringDateHRD.getMonth();
-        var days = currentDate.getDate() - hiringDateHRD.getDate() + 1;
+        var days = currentDate.getDate() - hiringDateHRD.getDate();
 
         if(days < 0){
             months -= 1;
