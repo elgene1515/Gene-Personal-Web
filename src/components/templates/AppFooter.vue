@@ -47,8 +47,7 @@
             <v-row>
                 <v-col>
                     <div class="copyright-container">
-                        Copyright © {{ new Date().getFullYear() }} by <strong>GENE</strong> 
-                        <small class="d-block d-sm-inline"> - Built with Vue, Vuetify, SCSS</small>
+                        <strong>GENE</strong> © {{ new Date().getFullYear() }} | Vue + Vuetify + SCSS
                     </div>
                 </v-col>
             </v-row>
