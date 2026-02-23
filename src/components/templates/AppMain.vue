@@ -3,19 +3,17 @@
         <!-- SECTION Home -->
         <div ref="homeRef" class="home reveal-on-scroll" v-intersect="{handler: onIntersect, options: { threshold: 0.2 }}">
             <v-row class="h-content">
-                <v-col>
-                    <v-container class="h-container">
-                        <h5>Hello World, I am</h5> 
-        
-                        <h1>Elgene John Reyes</h1>
-                        
-                        <h3>and I'm a Full Stack Software Engineer</h3>
-                        <div class="h-button">
-                            <ButtonOutlined class="button" text="Get in touch" @click="navigation.gotoSection('contactMe')"></ButtonOutlined>
-                            <ButtonColored class="button" text="Download CV" @click="openCV()"></ButtonColored>
-                        </div>
-                    </v-container>
-                </v-col>
+                <v-container class="h-container">
+                    <h5>Hello World, I am</h5> 
+    
+                    <h1>Elgene John Reyes</h1>
+                    
+                    <h3>and I'm a Full Stack Software Engineer</h3>
+                    <div class="h-button">
+                        <ButtonOutlined class="button" text="Get in touch" @click="navigation.gotoSection('contactMe')"></ButtonOutlined>
+                        <ButtonColored class="button" text="Download CV" @click="openCV()"></ButtonColored>
+                    </div>
+                </v-container>
             </v-row>
         </div>
 
