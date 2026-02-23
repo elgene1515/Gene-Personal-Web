@@ -26,7 +26,7 @@
                 <v-col>
                     <v-card class="pe-experience">
                         <v-card-title><strong>Full Stack Web Engineer</strong> | H.R.D SINGAPORE PTE LTD</v-card-title>
-                        <v-card-subtitle>(Feb 2025 – Present) - {{ getHRDTotalYearsOfExperience.years }} years and {{ getHRDTotalYearsOfExperience.months }} months</v-card-subtitle>
+                        <v-card-subtitle>(Feb 2025 – Present) - {{ getHRDTotalYearsOfExperience.years }} year(s) and {{ getHRDTotalYearsOfExperience.months }} months</v-card-subtitle>
                         <v-card-text>
                             Developed and maintained scalable SPAs using Vue.js, improving front-end modularity and user
                             engagement. Engineered robust RESTful APIs using Laravel and Node.js and Express.js, facilitating seamless
