@@ -96,7 +96,7 @@
     .footer-main-container {
         background-color: #0d1b2a !important;
         color: white;
-        padding: 3rem 0 1rem 0;
+        padding: 3rem 0 0 0;
 
         .v-row{
             display: flex;
