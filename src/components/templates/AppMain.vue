@@ -9,6 +9,13 @@
                     <h1>Elgene John Reyes</h1>
                     
                     <h3>and I'm a Full Stack Software Engineer</h3>
+
+                    <div class="socialButton">
+                        <v-icon v-for="(onlinePlatform, index) in onlinePlatforms" :key="index" @click="openOnlineProfiles(onlinePlatform.name)">
+                            {{onlinePlatform.icon}}
+                        </v-icon>
+                    </div>
+
                     <div class="h-button">
                         <ButtonOutlined class="button" text="Get in touch" @click="navigation.gotoSection('contactMe')"></ButtonOutlined>
                         <ButtonColored class="button" text="Download CV" @click="openCV()"></ButtonColored>
@@ -32,7 +39,7 @@
                             internal applications. Collaborated in an Agile environment, utilizing Git for version control and peer code reviews to
                             ensure code quality.
                         </v-card-text>
-                        <v-chip-group>
+                        <v-chip-group show-arrows>
                             <v-chip>Laravel</v-chip>
                             <v-chip>Vue JS</v-chip>
                             <v-chip>Node JS</v-chip>
@@ -67,7 +74,7 @@
                         <v-card-actions>
                             <ButtonOutlined text="View Repository" @click="openProjectRepository(project.repo)"></ButtonOutlined>
                         </v-card-actions>
-                        <v-chip-group>
+                        <v-chip-group show-arrows>
                             <v-chip v-for="(tag, tagKey) in project.tags" :key="tagKey">{{ tag }}</v-chip>
                         </v-chip-group>
                     </v-card>
@@ -402,6 +409,37 @@ import emailjs from '@emailjs/browser';
         }
     );
 
+    // NOTE Social media
+    const onlinePlatforms = [
+        {
+            name: 'facebook',
+            icon: 'mdi-facebook',
+        },
+        {
+            name: 'github',
+            icon: 'mdi-github',
+        },
+        {
+            name: 'linkedin',
+            icon: 'mdi-linkedin',
+        }
+    ];
+    const openOnlineProfiles = (onlinePlatformName) =>{
+        switch (onlinePlatformName) {
+            case 'facebook':
+                window.open('https://www.facebook.com/elgene8/', '_blank');
+                break;
+            case 'github':
+                window.open('https://github.com/elgene1515', '_blank');
+                    break;
+            case 'linkedin':
+                window.open('https://www.linkedin.com/in/elgene-reyes/', '_blank');
+                break;
+            default:
+                break;
+        }
+    }
+
     // NOTE list of projects
     const listOfSoftwareEngineeringProjects = ref([
         {
@@ -577,7 +615,7 @@ import emailjs from '@emailjs/browser';
                     justify-content: center;
                     align-items: center;
                     text-align: center;
-                    gap: 3rem; 
+                    gap: 2rem; 
 
                     h5 {
                         padding: 0;
@@ -600,6 +638,23 @@ import emailjs from '@emailjs/browser';
                         font-size: 1.1rem;
                         color: lightslategray;
                         max-width: 80%;
+                    }
+
+                    .socialButton {
+                        display: flex;
+                        gap: 1.5rem;
+                        
+                        .v-icon {
+                            font-size: 2rem; 
+                            
+                            cursor: pointer;
+                            transition: transform 0.2s;
+
+                            &:hover {
+                                color: cyan;
+                                transform: translateY(-3px);
+                            }
+                        }
                     }
 
                     .h-button {
@@ -1001,6 +1056,8 @@ import emailjs from '@emailjs/browser';
             .home{
                 .h-content{
                     .h-container {
+                        gap: 3rem;
+
                         h5 {
                             font-size: 2rem;
                         }
@@ -1011,6 +1068,14 @@ import emailjs from '@emailjs/browser';
 
                         h3 {
                             font-size: 2rem;
+                        }
+
+                        .socialButton {
+                            gap: 2rem;
+                            
+                            .v-icon {
+                                font-size: 2.5rem; 
+                            }
                         }
                     }
                 }
@@ -1079,6 +1144,14 @@ import emailjs from '@emailjs/browser';
 
                         h3 {
                             font-size: 2rem;
+                        }
+
+                        .socialButton {
+                            gap: 3rem;
+                            
+                            .v-icon {
+                                font-size: 3rem; 
+                            }
                         }
 
                         .h-button {
@@ -1174,6 +1247,11 @@ import emailjs from '@emailjs/browser';
                         h3 {
                             font-size: 2rem;
                         }
+
+                        .socialButton {
+                            gap: 5rem;
+                        }
+                        
                         .h-button {
                             flex-direction: row;
                         }
