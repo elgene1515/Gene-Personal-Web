@@ -612,9 +612,10 @@ import emailjs from '@emailjs/browser';
                 .h-container {
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
+                    justify-content: start;
                     align-items: center;
                     text-align: center;
+                    padding-top: 15%;
                     gap: 2rem; 
 
                     h5 {
