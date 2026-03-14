@@ -15,5 +15,6 @@
         color:#2C3E50;
         background-color: cyan;
         margin: 5px;
+        border: 1px solid white;
     }
 </style>

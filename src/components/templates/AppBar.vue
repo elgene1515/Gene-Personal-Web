@@ -61,7 +61,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        background-color:  #2C3E50;
+        background-color: #111e2f;
         color: cyan;
 
         .title {

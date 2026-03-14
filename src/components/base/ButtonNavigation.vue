@@ -14,5 +14,9 @@
 <style scoped>
     .navigation-button {
         color: cyan;
+
+        &:hover{
+            background-color: #243147;
+        }
     }
 </style>

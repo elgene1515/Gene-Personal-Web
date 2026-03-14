@@ -94,7 +94,7 @@
 
 <style lang="scss" scoped>
     .footer-main-container {
-        background-color: #0d1b2a !important;
+        background-color: #111e2f;
         color: white;
         padding: 3rem 0 0 0;
 

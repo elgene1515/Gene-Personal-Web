@@ -8,7 +8,7 @@
     
                     <h1>Elgene John Reyes</h1>
                     
-                    <h3>and I'm a Full Stack Software Engineer</h3>
+                    <i class="subtitle">"Full Stack Engineer. Occasional Bug Creator. Eternal Problem Solver."</i>
 
                     <div class="socialButton">
                         <v-icon v-for="(onlinePlatform, index) in onlinePlatforms" :key="index" @click="openOnlineProfiles(onlinePlatform.name)">
@@ -594,7 +594,7 @@ import emailjs from '@emailjs/browser';
 
 <style lang="scss" scoped>
     .main-container {
-        background-color: #2C3E50;
+        background-color: #0d1b2a;
 
         .home{
             scroll-margin-top: 80px;
@@ -631,14 +631,6 @@ import emailjs from '@emailjs/browser';
                         font-size: 2.5rem;
                         color: cyan;
                         text-transform: uppercase;
-                    }
-
-                    h3 {
-                        padding: 0;
-                        line-height: 1.4;
-                        font-size: 1.1rem;
-                        color: lightslategray;
-                        max-width: 80%;
                     }
 
                     .socialButton {
@@ -684,7 +676,7 @@ import emailjs from '@emailjs/browser';
                 width: 100%;
 
                 .pe-experience {
-                    background-color: rgba(255, 255, 255, 0.05);
+                    background-color: #1b263b !important;
                     border: 1px solid cyan;
                     color: white;
                     padding: 1rem;
@@ -763,7 +755,7 @@ import emailjs from '@emailjs/browser';
                 }
 
                 .sep-projects-card{ 
-                    background-color: rgba(255, 255, 255, 0.05);
+                    background-color: #1b263b !important;
                     border: 1px solid cyan;
                     color: white;
                     padding: 1rem;
@@ -858,7 +850,7 @@ import emailjs from '@emailjs/browser';
                 width: 100%;
 
                 .s-skills{
-                    background-color: rgba(255, 255, 255, 0.05);
+                    background-color: #1b263b !important;
                     border: 1px solid cyan;
                     color: white;
                     padding: 1rem;
@@ -893,9 +885,9 @@ import emailjs from '@emailjs/browser';
                             justify-content: center;
                             padding: 0.5rem;
 
-                            background-color: rgba(255, 255, 255, 0.1); 
-                            border: 1px solid rgba(0, 255, 255, 0.3);
-                            border-radius: 12px;
+                            background-color: #243147; 
+                            border: 4px double rgba(0, 255, 255, 0.3);
+                            border-radius: 10px;
 
                             .s-skills-card-icon-box{
                                 height: 3rem;
@@ -945,7 +937,7 @@ import emailjs from '@emailjs/browser';
                     .am-awards-and-certification, 
                     .am-education, 
                     .am-language {
-                        background-color: rgba(255, 255, 255, 0.05);
+                        background-color: #1b263b !important;
                         border: 1px solid cyan;
                         color: white;
                         padding: 1rem;
@@ -1002,7 +994,8 @@ import emailjs from '@emailjs/browser';
                 width: 100%;
 
                 .cm-form{
-                    background-color: rgba(255, 255, 255, 0.05);
+                    background-color: #1b263b !important;
+                    // background-color: rgba(255, 255, 255, 0.05);
                     border: 1px solid cyan;
                     color: white;
                     padding: 1.5rem;
@@ -1067,10 +1060,6 @@ import emailjs from '@emailjs/browser';
                             font-size: 3rem;
                         }
 
-                        h3 {
-                            font-size: 2rem;
-                        }
-
                         .socialButton {
                             gap: 2rem;
                             
@@ -1123,7 +1112,6 @@ import emailjs from '@emailjs/browser';
 
     @media (min-width: 1280px) {
         .main-container {
-            background-color: #2C3E50;
 
             .home{
                 .h-content{
@@ -1141,10 +1129,6 @@ import emailjs from '@emailjs/browser';
 
                         h1 {
                             font-size: 5rem;
-                        }
-
-                        h3 {
-                            font-size: 2rem;
                         }
 
                         .socialButton {
@@ -1228,7 +1212,6 @@ import emailjs from '@emailjs/browser';
 
     @media (min-width: 1536px) {
         .main-container {
-            background-color: #2C3E50;
 
             .home{
                 .h-content{
@@ -1239,14 +1222,12 @@ import emailjs from '@emailjs/browser';
                         align-items: center;
                         text-align: center;
                         gap: 5rem; 
+                        padding-top: 0%;
                         h5 {
                             font-size: 3rem;
                         }
                         h1 {
                             font-size: 5rem;
-                        }
-                        h3 {
-                            font-size: 2rem;
                         }
 
                         .socialButton {
