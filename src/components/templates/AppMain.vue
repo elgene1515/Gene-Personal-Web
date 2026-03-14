@@ -598,7 +598,7 @@
 
         .home{
             scroll-margin-top: 80px;
-            min-height: 100vh; 
+            min-height: 100dvh; 
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -666,7 +666,7 @@
         }
         .professional-experiece {
             scroll-margin-top: 80px;
-            min-height: 100vh; 
+            min-height: 100dvh; 
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -728,7 +728,7 @@
         }
         .software-engineering-projects{
             scroll-margin-top: 80px;
-            min-height: 100vh; 
+            min-height: 100dvh; 
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -840,7 +840,7 @@
         }
         .skills{
             scroll-margin-top: 80px;
-            min-height: 100vh; 
+            min-height: 100dvh; 
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -920,7 +920,7 @@
         }
         .about-me{
             scroll-margin-top: 80px;
-            min-height: 100vh; 
+            min-height: 100dvh; 
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -989,7 +989,7 @@
         }
         .contact-me{
             scroll-margin-top: 80px;
-            min-height: 100vh; 
+            min-height: 100dvh; 
             display: flex;
             flex-direction: column;
             align-items: center;
