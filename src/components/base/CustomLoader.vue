@@ -14,7 +14,7 @@
     const globalStore = useGlobalStore();
 </script>
 
-<!-- <style scoped>
+<style scoped>
     .customLoader-overlay{
         -webkit-backdrop-filter: blur(8px) !important; 
         backdrop-filter: blur(8px) !important;
@@ -71,4 +71,4 @@
         background-color: aqua;
         }
     }
-</style> -->
+</style>
