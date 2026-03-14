@@ -11,7 +11,6 @@
 
 <script setup>
     import { useGlobalStore } from '@/stores/globalStore';
-import ButtonOutlined from './ButtonOutlined.vue';
 
     const globalStore = useGlobalStore();
 </script>
