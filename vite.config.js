@@ -6,7 +6,8 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Gene-Personal-Web/',
+  // base: '/Gene-Personal-Web/', //for githubpages deployment
+  base: '/', // now switching to vercel for cleaner DNS.
   plugins: [
     vue(),
     // vueDevTools(),
