@@ -4,6 +4,11 @@ on:
   push:
     branches: [main]
 
+# --- This stops old builds and only runs the latest one ---
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 permissions:
   contents: read
   pages: write
@@ -20,11 +25,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm' # This makes your builds faster!
 
       - name: Install and Build 🏗️
         run: |
           npm install
-          npm run build
+          npm run build -- --base=/Gene-Personal-Web/
 
       - name: Upload artifact 📤
         uses: actions/upload-pages-artifact@v3
