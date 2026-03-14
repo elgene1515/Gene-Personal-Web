@@ -8,7 +8,7 @@
     
                     <h1>Elgene John Reyes</h1>
                     
-                    <i class="subtitle">"Full Stack Engineer. Occasional Bug Creator. Eternal Problem Solver."</i>
+                    <i>"Full Stack Engineer. Occasional Bug Creator. Eternal Problem Solver."</i>
 
                     <div class="socialButton">
                         <v-icon v-for="(onlinePlatform, index) in onlinePlatforms" :key="index" @click="openOnlineProfiles(onlinePlatform.name)">
@@ -621,16 +621,23 @@ import emailjs from '@emailjs/browser';
                     h5 {
                         padding: 0;
                         line-height: 1.6;
-                        font-size: 1.2rem;
+                        font-size: clamp(1.2rem,3vw + 1rem,3rem);
                         color: white;                        
                     }
 
                     h1 {
                         padding: 0;
                         line-height: 1.1;
-                        font-size: 2.5rem;
+                        font-size: clamp(2.5rem,5vw + 2rem,5rem);;
                         color: cyan;
                         text-transform: uppercase;
+                    }
+
+                    i{
+                        padding: 0;
+                        line-height: 1.1;
+                        font-size: clamp(0.2rem,1vw + 0.5rem, 1rem);;
+                        color: white;
                     }
 
                     .socialButton {
@@ -1052,14 +1059,6 @@ import emailjs from '@emailjs/browser';
                     .h-container {
                         gap: 3rem;
 
-                        h5 {
-                            font-size: 2rem;
-                        }
-
-                        h1 {
-                            font-size: 3rem;
-                        }
-
                         .socialButton {
                             gap: 2rem;
                             
@@ -1121,15 +1120,7 @@ import emailjs from '@emailjs/browser';
                         justify-content: center;
                         align-items: center;
                         text-align: center;
-                        gap: 5rem; 
-
-                        h5 {
-                            font-size: 3rem;
-                        }
-
-                        h1 {
-                            font-size: 5rem;
-                        }
+                        gap: 5rem;
 
                         .socialButton {
                             gap: 3rem;
@@ -1223,12 +1214,6 @@ import emailjs from '@emailjs/browser';
                         text-align: center;
                         gap: 5rem; 
                         padding-top: 0%;
-                        h5 {
-                            font-size: 3rem;
-                        }
-                        h1 {
-                            font-size: 5rem;
-                        }
 
                         .socialButton {
                             gap: 5rem;
