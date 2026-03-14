@@ -15,7 +15,7 @@
     const globalStore = useGlobalStore();
 </script>
 
-<style scoped>
+<!-- <style scoped>
     .customDialog-overlay{
         -webkit-backdrop-filter: blur(8px) !important; 
         backdrop-filter: blur(8px) !important;
@@ -42,4 +42,4 @@
     .warnning{
         color: orange;
     }
-</style>
+</style> -->
