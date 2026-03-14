@@ -14,7 +14,7 @@ export default defineConfig({
   ],
   build: {
     target: 'es2015', // Increases compatibility for iOS 11-13
-    cssTarget: 'safari15' // Ensures CSS variables work on older mobile browsers
+    cssTarget: 'chrome61' // Ensures CSS variables work on older mobile browsers
   },
   server: {
     allowedHosts: true // This allows all hostnames, including Pinggy for "ssh -p 443 -R 0:localhost:5173 a.pinggy.io"

@@ -17,8 +17,6 @@
 
 <style scoped>
     .customDialog-overlay{
-        -webkit-backdrop-filter: blur(8px) !important; 
-        backdrop-filter: blur(8px) !important;
         background: rgba(44, 62, 80, 0.4) !important; /* Matches your #2C3E50 background */
         opacity: 1 !important;
 
