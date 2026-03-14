@@ -592,7 +592,7 @@
     }
 </script>
 
-<style lang="scss" scoped>
+<!-- <style lang="scss" scoped>
     .main-container {
         background-color: #0d1b2a;
 
@@ -1314,4 +1314,4 @@
             }
         }
     }
-</style>
+</style> -->
